@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
-
   <head>
     <meta charset="utf-8">
     <title>Подбор программы</title>
   </head>
 
   <body>
-
     <header class="page-header">
-
       <a class="page-header__logo logo-site" href="index.html">
         <img class="logo-site__img" src="http://placehold.it/33x38" width="33" height="38" alt="Логотип Кэт энерджи">
         <img class="logo-site__title" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт энерджи">
       </a>
-
       <nav class="main-nav">
-
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-
         <div class="main-nav__wrapper">
           <ul class="main-nav__list list-nav">
             <li class="list-nav__item">
@@ -34,9 +28,7 @@
             </li>
           </ul>
         </div>
-
       </nav>
-
     </header>
 
     <main class="page-main">
@@ -44,121 +36,89 @@
       <h1 class="page-main__title">Подбор программы</h1>
 
       <section class="feedback">
-
         <h2 class="visually-hidden">Анкета для подбора программы питания</h2>
-
         <p class="feedback__info">Заполните анкету и мы подберем программу питания для вашего кота</p>
-
         <form class="feedback__form form-feedback" action="https://echo.htmlacademy.ru" method="post">
-
           <fieldset class="form-feedback__item">
-
             <legend class="visually-hidden">Данные кота</legend>
-
             <p class="form-feedback__group">
               <label class="form-feedback__label" for="feedbackName">Имя:*</label>
               <input class="form-feedback__input" id="feedbackName" type="text" name="name" placeholder="Барсик" required>
             </p>
-
             <p class="form-feedback__group">
               <label class="form-feedback__label" for="feedbackWeight">Вес (кг):*</label>
               <input class="form-feedback__input" id="feedbackWeight" type="number" name="weight" placeholder="7" required>
             </p>
-
             <p class="form-feedback__group">
               <label class="form-feedback__label" for="feedbackAge">Возраст (лет):</label>
               <input class="form-feedback__input" id="feedbackAge" type="number" name="age" placeholder="7">
             </p>
-
           </fieldset>
 
           <fieldset class="form-feedback__item">
-
             <legend class="visually-hidden">Тип программы</legend>
-
             <p class="form-feedback__group">
               <input class="form-feedback__input visually-hidden" id="feedbackSlim" type="radio" name="program" value="slim" checked>
               <label class="form-feedback__label form-feedback__label--radio" for="feedbackSlim">Похудение</label>
             </p>
-
             <p class="form-feedback__group">
               <input class="form-feedback__input visually-hidden" id="feedbackPro" type="radio" name="program" value="pro">
               <label class="form-feedback__label form-feedback__label--radio" for="feedbackPro">Набор массы</label>
             </p>
-
             <p class="form-feedback__group">
               <input class="form-feedback__input visually-hidden" id="feedbackAdvice" type="radio" name="program" value="advice">
               <label class="form-feedback__label form-feedback__label--radio" for="feedbackAdvice">Не знаю (Нужен ваш совет)</label>
             </p>
-
           </fieldset>
 
           <fieldset class="form-feedback__item">
-
             <legend class="form-feedback__title">Контактные данные (владельца кота)</legend>
-
             <p class="form-feedback__group">
               <label class="form-feedback__label" for="feedbackEmail">E-mail:*</label>
               <input class="form-feedback__input form-feedback__input--email" id="feedbackEmail" type="email" name="email" placeholder="kuklachev@gmail.com" required>
             </p>
-
             <p class="form-feedback__group">
               <label class="form-feedback__label" for="feedbackWeight">Телефон:*</label>
               <input class="form-feedback__input form-feedback__input--phone" id="feedbackWeight" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
             </p>
-
           </fieldset>
 
           <fieldset class="form-feedback__item">
-
             <legend class="form-feedback__title">Комментарий</legend>
-
             <p class="form-feedback__group">
               <textarea class="form-feedback__textarea" name="comment" id="feedbackCommentary" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
             </p>
-
           </fieldset>
 
           <fieldset class="form-feedback__item">
-
             <legend class="visually-hidden">Дополнительно</legend>
-
             <p class="form-feedback__group">
               <input class="form-feedback__input visually-hidden" id="feedbackSweetener" type="checkbox" name="sweetener" checked>
               <label class="form-feedback__label form-feedback__label--checkbox" for="feedbackSweetener">Сахарозаменитель</label>
             </p>
-
             <p class="form-feedback__group">
               <input class="form-feedback__input visually-hidden" id="feedbackWater" type="checkbox" name="water">
               <label class="form-feedback__label form-feedback__label--checkbox" for="feedbackWater">Питьевая вода</label>
             </p>
-
             <p class="form-feedback__group">
               <input class="form-feedback__input visually-hidden" id="feedbackMilk" type="checkbox" name="milk">
               <label class="form-feedback__label form-feedback__label--checkbox" for="feedbackMilk">Молоко</label>
             </p>
-
             <p class="form-feedback__group">
               <input class="form-feedback__input visually-hidden" id="feedbackVitamin" type="checkbox" name="vitamin">
               <label class="form-feedback__label form-feedback__label--checkbox" for="feedbackVitamin">Витамины</label>
             </p>
-
           </fieldset>
 
           <p class="form-feedback__controls">
             <button class="form-feedback__btn btn btn-primary" type="submit">Отправить заявку</button>
           </p>
-
           <small class="form-feedback__info">* — Обязательные поля</small>
-
         </form>
-
       </section>
-
     </main>
 
     <footer class="page-footer">
-
       <div class="page-footer__contacts contacts">
         <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
         <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
@@ -166,11 +126,9 @@
           <img class="map__img" src="http://placehold.it/320x362" width="320" height="362">
         </p>
       </div>
-
       <a class="page-footer__logo logo-site">
         <img class="logo-site__title" src="http://placehold.it/128x24" width="128" height="24" alt="Кэт энерджи">
       </a>
-
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
@@ -184,16 +142,12 @@
           </li>
         </ul>
       </div>
-
       <div class="page-footer__copyrights copyrights">
         <a class="copyrights__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a class="copyrights__link copyrights__link--right" href="https://htmlacademy.ru/intensive/adaptive">
           <img class="copyrights__img" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип Академии">
         </a>
       </div>
-
     </footer>
-
   </body>
-
 </html>
