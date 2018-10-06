@@ -1,0 +1,40 @@
+.btn {
+  display: inline-block;
+  padding: 15px 25px;
+
+  @include text-primary($transform: uppercase);
+  white-space: nowrap;
+
+  border: 0;
+
+  vertical-align: middle;
+  cursor: pointer;
+
+  &--default {
+    color: $text-default;
+    background-color: $bg-default;
+
+    &:focus,
+    &:hover {
+      background-color: darken($bg-default, 3%);
+    }
+
+    &:active {
+      color: rgba($text-default, 0.3);
+    }
+  }
+
+  &--primary {
+    color: $text-light;
+    background-color: $bg-primary;
+
+    &:focus,
+    &:hover {
+      background-color: darken(saturate($bg-primary, 4%), 4%);
+    }
+
+    &:active {
+      color: rgba($text-light, 0.3);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.main-nav {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.main-nav__logo {
+  display: inline-block;
+  margin-top: 11px;
+  margin-bottom: 16px;
+
+  vertical-align: middle;
+}
+
+.main-nav__toggle {
+  width: 24px;
+  height: 18px;
+
+  @include indent-reset;
+
+  background: none;
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  border: 0;
+
+  cursor: pointer;
+
+  &--active {
+    background-image: url("../img/icon-close.svg");
+  }
+}
+
+.main-nav__navbar {
+  @include container-reset;
+
+  &:not(&--show) {
+    display: none;
+  }
+}

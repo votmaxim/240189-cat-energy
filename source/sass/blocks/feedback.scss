@@ -1,0 +1,6 @@
+.feedback__info {
+  @include indent-reset;
+  margin-bottom: 40px;
+
+  @include text-primary($color: #222222, $transform: uppercase);
+}

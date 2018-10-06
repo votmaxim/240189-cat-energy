@@ -1,0 +1,21 @@
+.item-additional {
+  border-top: 1px solid #cdcdcd;
+}
+
+.item-additional__title {
+  @include indent-reset;
+  margin-bottom: 10px;
+
+  @include text-primary($size: 24px, $height: 24px);
+}
+
+.item-additional__table {
+  margin-bottom: 10px;
+}
+
+.item-additional__btn {
+  display: block;
+  margin-bottom: 17px;
+
+  text-align: center;
+}

@@ -1,0 +1,17 @@
+.item-catalog {
+  padding-right: 20px;
+  padding-left: 20px;
+
+  border-top: 1px solid #ededed;
+}
+
+.item-catalog__title {
+  @include text-primary($size: 16px, $height: 20px, $transform: uppercase);
+}
+
+.item-catalog__btn {
+  display: block;
+  margin-bottom: 25px;
+
+  text-align: center;
+}

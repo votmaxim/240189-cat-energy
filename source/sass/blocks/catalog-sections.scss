@@ -1,0 +1,118 @@
+.catalog-sections {
+  border: 1px solid yellow;
+}
+
+.catalog-sections__list {
+  @include list-reset;
+}
+
+.catalog-sections__item {
+  margin-bottom: 20px;
+  padding: 20px 20px 0;
+
+  background-color: $bg-default;
+
+  border: 1px solid red;
+}
+
+.catalog-sections__title {
+  position: relative;
+
+  @include indent-reset;
+  margin-bottom: 20px;
+  padding: 7px 0 7px 70px;
+
+  @include text-primary($size: 24px, $height: 37px, $transform: uppercase);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: $bg-primary;
+
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &--slim::after {
+    bottom: 4px;
+    left: 8px;
+
+    width: 35px;
+    height: 50px;
+
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+
+  &--pro::after {
+    bottom: 11px;
+    left: -9px;
+
+    width: 70px;
+    height: 30px;
+
+    background-image: url("../img/icon-cat-pro.svg");
+  }
+}
+
+.catalog-sections__description {
+  @include indent-reset;
+
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.catalog-sections__link {
+  position: relative;
+
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-right: 40px;
+
+  @include text-primary($size: 16px, $height: 16px, $transform: uppercase);
+
+  vertical-align: middle;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+
+    width: 24px;
+    height: 16px;
+
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: 24px 10px;
+  }
+
+  &:hover {
+    padding-right: 48px;
+
+    &::after {
+      width: 33px;
+
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      background-size: 33px 10px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

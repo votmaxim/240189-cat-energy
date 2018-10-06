@@ -1,0 +1,34 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: $text-default;
+
+  background-color: #ffffff;
+
+  // TMP
+  max-width: 320px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

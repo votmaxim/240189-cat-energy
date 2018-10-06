@@ -1,0 +1,56 @@
+.catalog-additional {
+  border: 1px solid red;
+}
+
+.catalog-additional__title {
+  @include indent-reset;
+  margin-bottom: 30px;
+
+  @include text-primary($size: 24px, $height: 24px);
+}
+
+.catalog-additional__list {
+  @include list-reset;
+  margin-bottom: 40px;
+
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.catalog-additional__item {
+  border: 1px solid green;
+}
+
+.catalog-additional__gift {
+  position: relative;
+
+  min-height: 290px;
+  padding-top: 190px;
+  padding-right: 60px;
+  padding-left: 60px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $text-light;
+
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  border: 1px solid orange;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 50%;
+
+    width: 55px;
+    height: 60px;
+    margin-left: -23px;
+
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}

@@ -1,0 +1,36 @@
+.promo {
+  padding-top: 30px;
+
+  text-align: center;
+
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  border: 1px solid orange;
+}
+
+.promo__title {
+  @include indent-reset;
+  margin-bottom: 20px;
+
+  @include text-primary($size: 36px, $height: 36px, $color: $text-light);
+}
+
+.promo__slogan {
+  display: block;
+
+  @include indent-reset;
+  margin-bottom: 30px;
+
+  @include text-primary($height: 14px, $transform: uppercase, $color: $text-light);
+}
+
+.promo__picture {
+  @include indent-reset;
+}
+
+.promo__btn {
+  display: block;
+  margin-bottom: 20px;
+}
