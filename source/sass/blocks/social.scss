@@ -9,14 +9,14 @@
 }
 
 .social__link {
-  display: block;
+  display: inline-block;
   width: 30px;
   height: 30px;
 
-  vertical-align: middle;
-
   background-repeat: no-repeat;
   background-position: 0 0;
+
+  vertical-align: middle;
 
   &--vkontakte {
     background-image: url("../img/icon-vk-mobile.svg");

@@ -12,6 +12,7 @@
 
   &--default {
     color: $text-default;
+
     background-color: $bg-default;
 
     &:focus,
@@ -26,6 +27,7 @@
 
   &--primary {
     color: $text-light;
+
     background-color: $bg-primary;
 
     &:focus,

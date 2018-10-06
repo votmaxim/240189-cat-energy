@@ -1,5 +1,5 @@
 body {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 
   font-family: "Arial", sans-serif;
@@ -9,9 +9,6 @@ body {
   color: $text-default;
 
   background-color: #ffffff;
-
-  // TMP
-  max-width: 320px;
 }
 
 a {

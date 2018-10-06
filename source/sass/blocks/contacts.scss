@@ -34,6 +34,8 @@
   @include indent-reset;
   @include container-reset;
 
+  text-align: center;
+
   &::after {
     content: "";
     position: absolute;
