@@ -1,0 +1,32 @@
+.example {
+  padding-top: 15px;
+  padding-bottom: 40px;
+
+  background-color: #f2f2f2;
+  border: 1px solid blue;
+}
+
+.example__title {
+  @include indent-reset;
+  margin-bottom: 20px;
+
+  @include text-primary($size: 36px, $height: 60px);
+}
+
+.example__description {
+  @include indent-reset;
+  margin-bottom: 30px;
+
+  border: 1px solid red;
+}
+
+.example__list {
+  @include list-reset;
+  margin-bottom: 40px;
+
+  border: 1px solid red;
+}
+
+.example__slider {
+  border: 1px solid red;
+}

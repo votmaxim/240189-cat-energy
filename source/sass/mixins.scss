@@ -1,0 +1,24 @@
+@mixin indent-reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-reset {
+  @include indent-reset;
+
+  list-style: none;
+}
+
+@mixin container-reset {
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+@mixin text-primary($size: 14px, $weight: 400, $height: 18px, $transform: initial, $color: $text-dark) {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  text-transform: $transform;
+  color: $color;
+}

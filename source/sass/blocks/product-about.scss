@@ -1,0 +1,55 @@
+.product-about {
+  border: 1px solid green;
+}
+
+.product-about__title {
+  @include indent-reset;
+  margin-bottom: 35px;
+
+  @include text-primary($size: 36px, $height: 60px);
+}
+
+.product-about__list {
+  @include list-reset;
+  margin-bottom: 20px;
+}
+
+.product-about__item {
+  position: relative;
+
+  min-height: 60px;
+  margin-bottom: 20px;
+  padding-left: 80px;
+
+  border: 1px solid red;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: $bg-primary;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &--nature::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &--powder::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &--food::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &--time::before {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+}

@@ -1,0 +1,27 @@
+.list-nav {
+  @include list-reset;
+}
+
+.list-nav__item {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  text-align: center;
+
+  border-top: 1px solid #e6e6e6;
+}
+
+.list-nav__link {
+  position: relative;
+
+  @include text-primary(20px, 500, 20px, uppercase);
+
+  &:focus[href],
+  &:hover[href] {
+    opacity: 0.6;
+  }
+
+  &:active[href] {
+    opacity: 0.3;
+  }
+}

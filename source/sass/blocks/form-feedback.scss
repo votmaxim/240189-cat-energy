@@ -1,0 +1,132 @@
+.form-feedback__item {
+  @include indent-reset;
+  margin-bottom: 20px;
+
+  border: 1px solid red;
+}
+
+.form-feedback__title {
+  @include indent-reset;
+  margin-bottom: 30px;
+
+  @include text-primary($size: 24px, $height: 24px);
+}
+
+.form-feedback__group {
+  @include indent-reset;
+}
+
+.form-feedback__input {
+  margin-bottom: 14px;
+  margin-left: 15px;
+  padding: 12px 15px;
+
+  &::-webkit-input-placeholder {
+    @include text-primary($size: 16px, $height: 18px, $color: #444444, $transform: uppercase);
+  }
+}
+
+.form-feedback__label {
+  position: relative;
+
+  @include text-primary($size: 16px, $height: 18px, $color: #222222, $transform: uppercase);
+
+  cursor: pointer;
+
+  &--radio {
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    display: block;
+    margin-bottom: 13px;
+    padding-left: 45px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 30px;
+      height: 30px;
+
+      border: 1px solid #e2e2e2;
+      border-radius: 50%;
+    }
+
+    .form-feedback__input:checked ~ &::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 9px;
+
+      width: 12px;
+      height: 12px;
+
+      background-color: $bg-primary;
+      border-radius: 50%;
+    }
+  }
+
+  &--checkbox {
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    display: block;
+    margin-bottom: 13px;
+    padding-left: 45px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 30px;
+      height: 30px;
+
+      border: 1px solid #e2e2e2;
+    }
+
+    .form-feedback__input:checked ~ &::after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 5px;
+
+      width: 21px;
+      height: 16px;
+
+      background-image: url("../img/icon-tick.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+}
+
+.form-feedback__textarea {
+  min-width: 100%;
+  min-height: 150px;
+  padding: 15px;
+
+  &::-webkit-input-placeholder {
+    @include text-primary($size: 16px, $height: 18px, $color: #444444, $transform: uppercase);
+  }
+}
+
+.form-feedback__btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+
+.form-feedback__info {
+  display: block;
+  margin-bottom: 30px;
+  padding-left: 60px;
+
+  font-size: 14px;
+  line-height: 16px;
+}
