@@ -1,9 +1,7 @@
 .slider-example__list {
-  @include list-reset;
-}
+  position: relative;
 
-.slider-example__item:not(.slider-example__item--active) {
-  display: none;
+  @include list-reset;
 }
 
 .slider-example__item {
@@ -11,14 +9,16 @@
   margin-bottom: 25px;
 
   text-align: center;
+
+  &:not(&--active) {
+    display: none;
+  }
 }
 
 .slider-example__toggles {
   @include indent-reset;
 
   text-align: center;
-
-  border: 1px solid green;
 }
 
 .slider-example__toggle {
@@ -52,5 +52,11 @@
     border-radius: 10px;
 
     appearance: none;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .slider-example__item {
+    padding-top: 60px;
   }
 }

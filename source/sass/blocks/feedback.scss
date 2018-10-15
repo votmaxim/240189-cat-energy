@@ -4,3 +4,49 @@
 
   @include text-primary($color: #222222, $transform: uppercase);
 }
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  .feedback__container {
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .feedback {
+    margin-bottom: 50px;
+  }
+
+  .feedback__info {
+    width: 380px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .feedback__additional {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .feedback__controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .feedback__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

@@ -2,24 +2,52 @@
   @include indent-reset;
   margin-bottom: 20px;
 
-  border: 1px solid red;
+  border: 0;
+}
+
+.form-feedback__item--bordered {
+  margin-right: -20px;
+  margin-left: -20px;
+  padding: 20px 20px;
+
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
 }
 
 .form-feedback__title {
+  display: flex;
+  align-items: center;
+
   @include indent-reset;
   margin-bottom: 30px;
+  margin-left: 20px;
 
   @include text-primary($size: 24px, $height: 24px);
+
+  &::after {
+    content: "";
+
+    flex-grow: 1;
+    height: 3px;
+    margin-left: 22px;
+
+    background-color: $bg-primary;
+  }
 }
 
 .form-feedback__group {
+  display: flex;
+  align-items: baseline;
   @include indent-reset;
 }
 
 .form-feedback__input {
+  flex-grow: 1;
   margin-bottom: 14px;
   margin-left: 15px;
   padding: 12px 15px;
+
+  border: 1px solid #e6e6e6;
 
   &::-webkit-input-placeholder {
     @include text-primary($size: 16px, $height: 18px, $color: #444444, $transform: uppercase);
@@ -109,6 +137,8 @@
   min-height: 150px;
   padding: 15px;
 
+  border: 1px solid #e6e6e6;
+
   &::-webkit-input-placeholder {
     @include text-primary($size: 16px, $height: 18px, $color: #444444, $transform: uppercase);
   }
@@ -129,4 +159,81 @@
 
   font-size: 14px;
   line-height: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .form-feedback__item {
+    margin-bottom: 40px;
+  }
+
+  .form-feedback__item--bordered {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 25px;
+
+    border: 1px solid #ededed;
+  }
+
+  .form-feedback__title {
+    margin-bottom: 60px;
+    margin-left: 0;
+
+    &::before {
+      content: "";
+
+      width: 30px;
+      height: 3px;
+      margin-right: 40px;
+
+      background-color: $bg-primary;
+    }
+  }
+
+  .form-feedback__group--checkbox {
+    width: 300px;
+  }
+
+  .form-feedback__input {
+    margin-bottom: 20px;
+    padding: 16px 20px;
+
+    &::-webkit-input-placeholder {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .form-feedback__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form-feedback__btn {
+    width: 280px;
+    padding: 16px 25px;
+
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-feedback__item--about,
+  .form-feedback__item--bordered {
+    width: 570px;
+  }
+
+  .form-feedback__group--input {
+    width: 570px;
+  }
+
+  .form-feedback__btn {
+    width: 570px;
+  }
+
+  .form-feedback__info {
+    padding-left: 80px;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
 }

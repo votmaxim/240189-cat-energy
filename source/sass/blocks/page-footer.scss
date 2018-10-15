@@ -1,12 +1,41 @@
 .page-footer {
   background-color: #f2f2f2;
-  border: 1px solid violet;
+}
+
+.page-footer__top {
+  position: relative;
 }
 
 .page-footer__contacts {
-  padding-top: 30px;
+  padding: 30px 20px;
+}
 
-  border: 1px solid red;
+.page-footer__map {
+  position: relative;
+
+  @include indent-reset;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 62px;
+    height: 53px;
+    margin-top: -26px;
+    margin-left: -31px;
+
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+  }
+}
+
+.page-footer__bottom {
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
 .page-footer__logo {
@@ -14,14 +43,58 @@
   margin-bottom: 30px;
 
   text-align: center;
-
-  border: 1px solid orange;
 }
 
 .page-footer__social {
-  border: 1px solid green;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @include list-reset;
+  margin-bottom: 20px;
+  padding: 25px 75px;
 }
 
-.page-footer__copyrights {
-  border: 1px solid blue;
+@media (min-width: $tablet-width) {
+  .page-footer__contacts {
+    padding: 65px 70px;
+  }
+
+  .page-footer__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .page-footer__logo {
+    margin: 0;
+  }
+
+  .page-footer__social {
+    width: 130px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-footer__copyrights {
+    width: 160px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__contacts {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    z-index: 1;
+
+    width: 570px;
+    height: 200px;
+
+    padding: 65px 75px;
+  }
 }

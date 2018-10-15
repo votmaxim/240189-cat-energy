@@ -1,8 +1,29 @@
 .props-table {
+  width: 100%;
+
   font-size: 12px;
   line-height: 16px;
+
+  border-collapse: collapse;
 }
 
 .props-table__title {
   font-weight: 400;
+}
+
+.props-table__value {
+  text-align: right;
+}
+
+@media (min-width: $tablet-width) {
+  .props-table {
+    font-size: 16px;
+  }
+
+  .props-table__title,
+  .props-table__value {
+    padding: 10px 0;
+
+    border-bottom: 1px solid #cdcdcd;
+  }
 }

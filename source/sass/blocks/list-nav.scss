@@ -25,3 +25,48 @@
     opacity: 0.3;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .list-nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -35px;
+  }
+
+  .list-nav__item {
+    margin-left: 35px;
+    border: 0;
+  }
+
+  .list-nav__link {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .list-nav__link--active::after {
+    content: "";
+
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $bg-primary;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .list-nav__link {
+    font-size: 20px;
+  }
+
+  .list-nav__link--light {
+    color: $text-light;
+
+    &::after {
+    background-color: $text-light;
+    }
+  }
+}

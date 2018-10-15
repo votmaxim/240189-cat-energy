@@ -1,0 +1,19 @@
+.table-additional__value {
+  text-align: right
+}
+
+@media (min-width: $tablet-width) {
+  .table-additional__title {
+    text-align: right
+  }
+
+  .table-additional__value {
+    width: 95px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .table-additional__title {
+    text-align: left
+  }
+}
