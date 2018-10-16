@@ -1,10 +1,11 @@
 .catalog-additional__title {
+  position: relative;
+
   display: flex;
   align-items: center;
 
-  @include indent-reset;
-  margin-bottom: 30px;
-  margin-left: 20px;
+  padding: 0;
+  margin: 0 0 30px 20px;
 
   @include text-primary($size: 24px, $height: 24px);
 
@@ -17,61 +18,9 @@
 
     background-color: $bg-primary;
   }
-}
 
-.catalog-additional__list {
-  @include list-reset;
-  margin-bottom: 40px;
-
-  border-bottom: 1px solid #cdcdcd;
-}
-
-.catalog-additional__gift {
-  position: relative;
-
-  height: 290px;
-
-  @include indent-reset;
-  margin-bottom: 35px;
-  padding-top: 190px;
-  padding-right: 60px;
-  padding-left: 60px;
-
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  color: $text-light;
-
-  background-color: $bg-primary;
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: contain;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 65px;
-    left: 50%;
-
-    width: 55px;
-    height: 60px;
-    margin-left: -23px;
-
-    background-image: url("../img/icon-gift.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .catalog-additional__list {
-    margin-bottom: 70px;
-  }
-
-  .catalog-additional__title {
-    margin-bottom: 75px;
-    margin-left: 0;
+  @media (min-width: $tablet-width) {
+    margin: 0 0 75px;
 
     font-size: 36px;
 
@@ -87,9 +36,59 @@
   }
 }
 
-@media (min-width: $tablet-width) {
-  .catalog-additional__gift {
-    height: 200px;
+.catalog-additional__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.catalog-additional__list {
+  @include list-reset;
+  margin-bottom: 40px;
+
+  border-bottom: 1px solid #cdcdcd;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.catalog-additional__gift {
+  position: relative;
+
+  min-height: 290px;
+  margin: 0 0 35px;
+  padding: 190px 60px 0;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $text-light;
+
+  background-color: $bg-primary;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 50%;
+
+    width: 55px;
+    height: 60px;
+    margin-left: -23px;
+
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
     margin-bottom: 75px;
     padding: 70px 120px 70px 420px;
 
@@ -104,19 +103,12 @@
       margin: 0;
     }
   }
-}
 
-@media (min-width: $desktop-width) {
-  .catalog-additional__container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .catalog-additional__gift {
+  @media (min-width: $desktop-width) {
     width: 245px;
-    height: 290px;
-    margin: 0;
-    padding: 190px 40px 0 40px;
+    min-height: 290px;
+    margin-bottom: 70px;
+    padding: 190px 40px 0;
 
     text-align: center;
 
@@ -126,7 +118,7 @@
       top: 65px;
       left: 50%;
 
-      margin: -23px;
+      margin-left: -23px;
     }
   }
 }

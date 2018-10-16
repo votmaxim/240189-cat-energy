@@ -1,13 +1,10 @@
 .page-main__title {
-  @include indent-reset;
-  margin-top: 15px;
-  margin-bottom: 25px;
+  margin: 15px 0 25px;
+  padding: 0;
 
   @include text-primary($size: 36px, $height: 60px);
-}
 
-@media (min-width: $tablet-width) {
-  .page-main__title {
+  @media (min-width: $tablet-width) {
     margin-top: 65px;
     margin-bottom: 80px;
 

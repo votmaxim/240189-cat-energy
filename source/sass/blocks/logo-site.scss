@@ -12,17 +12,13 @@
 .logo-site__picture {
   width: 191px;
   height: 38px;
-}
 
-@media (min-width: $tablet-width) {
-  .logo-site__picture {
+  @media (min-width: $tablet-width) {
     width: 172px;
     height: 57px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .logo-site__picture {
+  @media (min-width: $desktop-width) {
     width: 202px;
     height: 59px;
   }

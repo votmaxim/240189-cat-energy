@@ -1,26 +1,44 @@
 .form-feedback__item {
-  @include indent-reset;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
+  padding: 0;
 
-  border: 0;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .form-feedback__item--bordered {
-  margin-right: -20px;
-  margin-left: -20px;
-  padding: 20px 20px;
+  @include container-reset();
+  padding: 20px;
 
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 25px;
+
+    border: 1px solid #ededed;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
+}
+
+.form-feedback__item--about {
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
 }
 
 .form-feedback__title {
   display: flex;
   align-items: center;
 
-  @include indent-reset;
-  margin-bottom: 30px;
-  margin-left: 20px;
+  margin: 0 0 30px 20px;
+  padding: 0;
 
   @include text-primary($size: 24px, $height: 24px);
 
@@ -33,6 +51,20 @@
 
     background-color: $bg-primary;
   }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 60px;
+
+    &::before {
+      content: "";
+
+      width: 30px;
+      height: 3px;
+      margin-right: 40px;
+
+      background-color: $bg-primary;
+    }
+  }
 }
 
 .form-feedback__group {
@@ -42,16 +74,37 @@
   @include indent-reset;
 }
 
+.form-feedback__group--input {
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
+}
+
+.form-feedback__group--checkbox {
+  @media (min-width: $tablet-width) {
+    width: 300px;
+  }
+}
+
 .form-feedback__input {
   flex-grow: 1;
-  margin-bottom: 14px;
-  margin-left: 15px;
+  margin: 0 0 15px 15px;
   padding: 12px 15px;
 
   border: 1px solid #e6e6e6;
 
   &::-webkit-input-placeholder {
     @include text-primary($size: 16px, $height: 18px, $color: #444444, $transform: uppercase);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+    padding: 16px 20px;
+
+    &::-webkit-input-placeholder {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -62,75 +115,77 @@
 
   cursor: pointer;
 
-  &--radio {
-    padding-top: 6px;
-    padding-bottom: 6px;
-
-    display: block;
-    margin-bottom: 13px;
-    padding-left: 45px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 30px;
-      height: 30px;
-
-      border: 1px solid #e2e2e2;
-      border-radius: 50%;
-    }
-
-    .form-feedback__input:checked ~ &::after {
-      content: "";
-      position: absolute;
-      top: 9px;
-      left: 9px;
-
-      width: 12px;
-      height: 12px;
-
-      background-color: $bg-primary;
-      border-radius: 50%;
-    }
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
   }
+}
 
-  &--checkbox {
-    padding-top: 6px;
-    padding-bottom: 6px;
+.form-feedback__label--radio {
+  display: block;
+  margin: 0 0 13px;
+  padding: 6px 0 6px 45px;
 
-    display: block;
-    margin-bottom: 13px;
-    padding-left: 45px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
+    width: 30px;
+    height: 30px;
 
-      width: 30px;
-      height: 30px;
-
-      border: 1px solid #e2e2e2;
-    }
-
-    .form-feedback__input:checked ~ &::after {
-      content: "";
-      position: absolute;
-      top: 7px;
-      left: 5px;
-
-      width: 21px;
-      height: 16px;
-
-      background-image: url("../img/icon-tick.svg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-    }
+    border: 1px solid #e2e2e2;
+    border-radius: 50%;
   }
+}
+
+.form-feedback__input:checked ~ .form-feedback__label--radio::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 9px;
+
+  width: 12px;
+  height: 12px;
+
+  background-color: $bg-primary;
+  border-radius: 50%;
+}
+
+.form-feedback__label--checkbox {
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  display: block;
+  margin-bottom: 13px;
+  padding-left: 45px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #e2e2e2;
+  }
+}
+
+.form-feedback__input:checked ~ .form-feedback__label--checkbox::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 5px;
+
+  width: 21px;
+  height: 16px;
+
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .form-feedback__textarea {
@@ -151,6 +206,17 @@
   margin-bottom: 20px;
 
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 280px;
+    padding: 16px 25px;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
 }
 
 .form-feedback__info {
@@ -160,78 +226,8 @@
 
   font-size: 14px;
   line-height: 16px;
-}
 
-@media (min-width: $tablet-width) {
-  .form-feedback__item {
-    margin-bottom: 40px;
-  }
-
-  .form-feedback__item--bordered {
-    margin-right: 0;
-    margin-left: 0;
-    padding: 25px;
-
-    border: 1px solid #ededed;
-  }
-
-  .form-feedback__title {
-    margin-bottom: 60px;
-    margin-left: 0;
-
-    &::before {
-      content: "";
-
-      width: 30px;
-      height: 3px;
-      margin-right: 40px;
-
-      background-color: $bg-primary;
-    }
-  }
-
-  .form-feedback__group--checkbox {
-    width: 300px;
-  }
-
-  .form-feedback__input {
-    margin-bottom: 20px;
-    padding: 16px 20px;
-
-    &::-webkit-input-placeholder {
-      font-size: 20px;
-      line-height: 20px;
-    }
-  }
-
-  .form-feedback__label {
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .form-feedback__btn {
-    width: 280px;
-    padding: 16px 25px;
-
-    font-size: 20px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .form-feedback__item--about,
-  .form-feedback__item--bordered {
-    width: 570px;
-  }
-
-  .form-feedback__group--input {
-    width: 570px;
-  }
-
-  .form-feedback__btn {
-    width: 570px;
-  }
-
-  .form-feedback__info {
+  @media (min-width: $desktop-width) {
     padding-left: 80px;
 
     font-size: 16px;

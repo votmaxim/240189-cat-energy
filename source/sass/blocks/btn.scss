@@ -10,42 +10,40 @@
   vertical-align: middle;
   cursor: pointer;
 
-  &--default {
-    color: $text-default;
-
-    background-color: $bg-default;
-
-    &:focus,
-    &:hover {
-      background-color: darken($bg-default, 3%);
-    }
-
-    &:active {
-      color: rgba($text-default, 0.3);
-    }
-  }
-
-  &--primary {
-    color: $text-light;
-
-    background-color: $bg-primary;
-
-    &:focus,
-    &:hover {
-      background-color: darken(saturate($bg-primary, 4%), 4%);
-    }
-
-    &:active {
-      color: rgba($text-light, 0.3);
-    }
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .btn {
+  @media (min-width: $tablet-width) {
     padding: 10px 25px;
 
     font-size: 16px;
     line-height: 20px;
+  }
+}
+
+.btn--default {
+  color: $text-default;
+
+  background-color: $bg-default;
+
+  &:focus,
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba($text-default, 0.3);
+  }
+}
+
+.btn--primary {
+  color: $text-light;
+
+  background-color: $bg-primary;
+
+  &:focus,
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba($text-light, 0.3);
   }
 }

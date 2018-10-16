@@ -1,13 +1,26 @@
 .product-about__title {
-  @include indent-reset;
-  margin-bottom: 35px;
+  margin: 0 0 35px;
+  padding: 0;
 
   @include text-primary($size: 36px, $height: 60px);
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .product-about__list {
   @include list-reset;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    counter-reset: li;
+  }
 }
 
 .product-about__item {
@@ -31,45 +44,10 @@
     background-position: 50% 50%;
   }
 
-  &--nature::before {
-    background-image: url("../img/advantage-leaf@1x.png");
-  }
-
-  &--powder::before {
-    background-image: url("../img/advantage-powder@1x.png");
-  }
-
-  &--food::before {
-    background-image: url("../img/advantage-dining@1x.png");
-  }
-
-  &--time::before {
-    background-image: url("../img/advantage-clock@1x.png");
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .product-about__title {
-    font-size: 60px;
-    line-height: 60px;
-  }
-
-  .product-about__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    counter-reset: li;
-  }
-
-  .product-about__item {
+  @media (min-width: $tablet-width) {
     width: 245px;
-    margin-right: 80px;
-    margin-top: 45px;
-    margin-bottom: 45px;
-    padding-top: 120px;
-    padding-bottom: 50px;
-    padding-left: 0;
+    margin: 45px 80px 45px 0;
+    padding: 120px 0 50px;
 
     &::before {
       width: 80px;
@@ -87,10 +65,32 @@
       @include text-primary($size: 281px, $height: 281px, $color: #f2f2f2);
     }
   }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+  }
 }
 
-@media (min-width: $desktop-width) {
-  .product-about__item {
-    margin-right: 0;
+.product-about__item--nature {
+  &::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+}
+
+.product-about__item--powder {
+  &::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+}
+
+.product-about__item--food {
+  &::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+}
+
+.product-about__item--time {
+  &::before {
+    background-image: url("../img/advantage-clock@1x.png");
   }
 }
