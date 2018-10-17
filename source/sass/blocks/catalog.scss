@@ -1,61 +1,26 @@
 .catalog {
   margin-bottom: 30px;
-
-  border: 1px solid green;
-  border-bottom: 1px solid #ededed;
 }
 
 .catalog__list {
   @include list-reset;
   @include container-reset;
-  margin-bottom: 25px;
 
-  border-bottom: 1px solid #ededed;
-}
-
-.catalog__item {
-  border: 1px solid red;
-}
-
-.catalog__more-btn {
-  display: block;
-  width: 100%;
-  margin-bottom: 40px;
-
-  text-align: center;
-}
-
-.catalog__more-header {
-  position: relative;
-
-  @include list-reset;
-  margin-bottom: 10px;
-  padding-top: 55px;
-
-  @include text-primary($size: 16px, $height: 20px, $transform: uppercase);
-  text-align: center;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-
-    width: 30px;
-    height: 30px;
-    margin-left: -15px;
-
-    background-image: url("../img/icon-plus-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
   }
 }
 
-.catalog__more-info {
-  @include indent-reset;
-  margin-bottom: 20px;
+.catalog__item {
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    margin-bottom: 60px;
+  }
 
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
+  @media (min-width: $desktop-width) {
+    width: 245px;
+  }
 }

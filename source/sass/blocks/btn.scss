@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  padding: 15px 25px;
+  padding: 11px 25px;
 
   @include text-primary($transform: uppercase);
   white-space: nowrap;
@@ -10,33 +10,40 @@
   vertical-align: middle;
   cursor: pointer;
 
-  &--default {
-    color: $text-default;
+  @media (min-width: $tablet-width) {
+    padding: 10px 25px;
 
-    background-color: $bg-default;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
 
-    &:focus,
-    &:hover {
-      background-color: darken($bg-default, 3%);
-    }
+.btn--default {
+  color: $text-default;
 
-    &:active {
-      color: rgba($text-default, 0.3);
-    }
+  background-color: $bg-default;
+
+  &:focus,
+  &:hover {
+    background-color: #ebebeb;
   }
 
-  &--primary {
-    color: $text-light;
+  &:active {
+    color: rgba($text-default, 0.3);
+  }
+}
 
-    background-color: $bg-primary;
+.btn--primary {
+  color: $text-light;
 
-    &:focus,
-    &:hover {
-      background-color: darken(saturate($bg-primary, 4%), 4%);
-    }
+  background-color: $bg-primary;
 
-    &:active {
-      color: rgba($text-light, 0.3);
-    }
+  &:focus,
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba($text-light, 0.3);
   }
 }

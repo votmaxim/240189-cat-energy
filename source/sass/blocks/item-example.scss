@@ -4,23 +4,65 @@
   margin-bottom: 35px;
 
   text-align: center;
+}
 
-  &--card {
-    width: 123px;
-    height: 56px;
-    padding-top: 14px;
+.item-example--card {
+  width: 123px;
+  height: 56px;
+  padding-top: 14px;
 
-    border: 1px solid #cdcdcd;
-    border-radius: 3px;
+  border: 1px solid #cdcdcd;
+  border-bottom: 0;
+  border-radius: 3px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+
+    background: linear-gradient(to right, #cdcdcd 18px, transparent 18px, transparent 105px, #cdcdcd 105px, #cdcdcd 100%);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    height: 72px;
+    padding-top: 22px;
+
+    &::after {
+      background: linear-gradient(to right, #cdcdcd 24px, transparent 24px, transparent 138px, #cdcdcd 138px, #cdcdcd 100%);
+    }
+  }
+}
+
+.item-example--inline {
+  @media (min-width: $tablet-width) {
+    text-align: right;
   }
 }
 
 .item-example__title {
   @include text-primary($size: 24px, $height: 24px, $transform: uppercase);
 
-  &--inline {
-    font-size: 14px;
-    line-height: 20px;
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.item-example__title--inline {
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 
@@ -38,5 +80,11 @@
   line-height: 12px;
   text-transform: lowercase;
 
-  background-color: #f2f2f2;
+  @media (min-width: $tablet-width) {
+    width: 115px;
+    padding: 0 7px;
+
+    font-size: 14px;
+    line-height: 14px;
+  }
 }

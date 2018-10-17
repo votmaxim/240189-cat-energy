@@ -1,14 +1,27 @@
 .list-nav {
   @include list-reset;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .list-nav__item {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px 0;
 
   text-align: center;
 
   border-top: 1px solid #e6e6e6;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 35px;
+    border: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .list-nav__link {
@@ -23,5 +36,40 @@
 
   &:active[href] {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+.list-nav__link--active {
+  @media (min-width: $tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: $bg-primary;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+  }
+}
+
+.list-nav__link--light {
+  @media (min-width: $desktop-width) {
+    color: $text-light;
+
+    &::after {
+      background-color: $text-light;
+    }
   }
 }

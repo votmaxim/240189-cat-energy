@@ -1,55 +1,43 @@
 .contacts {
-  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   background-color: #f2f2f2;
 
-  &--light {
-    @include container-reset;
-    padding-right: 20px;
-    padding-left: 20px;
-
+  @media (min-width: $desktop-width) {
     background-color: #ffffff;
   }
 }
 
-.contacts__title {
-  @include indent-reset;
-  margin-bottom: 30px;
+.contacts--light {
+  background-color: #ffffff;
+}
 
+.contacts__title {
+  width: 140px;
+
+  @include indent-reset;
   @include text-primary($size: 16px, $height: 20px, $transform: uppercase);
+
+  @media (min-width: $tablet-width) {
+    width: 180px;
+
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 
 .contacts__address {
+  width: 140px;
+
   @include indent-reset;
-  margin-bottom: 30px;
 
   line-height: 20px;
-}
 
-.contacts__map {
-  position: relative;
+  @media (min-width: $tablet-width) {
+    width: 180px;
 
-  max-height: 400px;
-
-  @include indent-reset;
-  @include container-reset;
-
-  text-align: center;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 62px;
-    height: 53px;
-    margin-top: -26px;
-    margin-left: -31px;
-
-    background-image: url("../img/map-pin.png");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: contain;
+    text-align: right;
   }
 }

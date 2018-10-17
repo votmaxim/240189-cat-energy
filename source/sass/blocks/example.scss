@@ -3,30 +3,93 @@
   padding-bottom: 40px;
 
   background-color: #f2f2f2;
-  border: 1px solid blue;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+
+    background: linear-gradient(to bottom, #ffffff 620px, #f2f2f2 620px, #f2f2f2 100%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: linear-gradient(to bottom, #ffffff 175px, #f2f2f2 175px, #f2f2f2 100%);
+  }
+}
+
+.example__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.example__info {
+  @media (min-width: $desktop-width) {
+    width: 450px;
+  }
 }
 
 .example__title {
-  @include indent-reset;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
+  padding: 0;
 
   @include text-primary($size: 36px, $height: 60px);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 150px;
+  }
 }
 
 .example__description {
-  @include indent-reset;
-  margin-bottom: 30px;
+  margin-bottom: 0 0 30px;
+  padding: 0;
 
-  border: 1px solid red;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .example__list {
-  @include list-reset;
-  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-  border: 1px solid red;
+  @include list-reset;
+}
+
+.example__item {
+  &:first-child {
+    margin-right: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:first-child {
+      margin-right: 40px;
+    }
+
+    &:last-child {
+      width: 175px;
+      margin-left: auto;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:last-child {
+      width: 325px;
+      margin-left: 0;
+    }
+  }
 }
 
 .example__slider {
-  border: 1px solid red;
+  @media (min-width: $desktop-width) {
+    width: 610px;
+  }
 }

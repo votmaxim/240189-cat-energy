@@ -1,6 +1,58 @@
+.feedback {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.feedback__container {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+}
+
 .feedback__info {
-  @include indent-reset;
-  margin-bottom: 40px;
+  margin: 0 0 40px;
+  padding: 0;
 
   @include text-primary($color: #222222, $transform: uppercase);
+
+  @media (min-width: $tablet-width) {
+    width: 380px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.feedback__top {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.feedback__contacts {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.feedback__additional {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.feedback__controls {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }

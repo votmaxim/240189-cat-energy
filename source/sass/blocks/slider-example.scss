@@ -1,24 +1,28 @@
 .slider-example__list {
+  position: relative;
+
   @include list-reset;
+}
+
+.slider-example__item {
+  margin: 0 0 25px;
+  padding: 0;
+
+  text-align: center;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding-top: 60px;
+  }
 }
 
 .slider-example__item:not(.slider-example__item--active) {
   display: none;
 }
 
-.slider-example__item {
-  @include indent-reset;
-  margin-bottom: 25px;
-
-  text-align: center;
-}
-
 .slider-example__toggles {
   @include indent-reset;
 
   text-align: center;
-
-  border: 1px solid green;
 }
 
 .slider-example__toggle {
