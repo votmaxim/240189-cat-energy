@@ -1,10 +1,20 @@
+.product-about {
+  @media (max-width: $tablet-width-only) {
+    padding-bottom: 11px;
+
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
 .product-about__title {
-  margin: 0 0 35px;
+  margin: 0 0 25px;
   padding: 0;
 
   @include text-primary($size: 36px, $height: 60px);
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+
     font-size: 60px;
     line-height: 60px;
   }
@@ -12,12 +22,13 @@
 
 .product-about__list {
   @include list-reset;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 0;
 
     counter-reset: li;
   }
@@ -46,8 +57,8 @@
 
   @media (min-width: $tablet-width) {
     width: 245px;
-    margin: 45px 80px 45px 0;
-    padding: 120px 0 50px;
+    margin: 40px 80px 40px 0;
+    padding: 115px 0 50px;
 
     &::before {
       width: 80px;

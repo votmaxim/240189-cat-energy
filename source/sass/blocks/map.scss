@@ -1,7 +1,45 @@
 .map {
   display: block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 165px;
+    left: 50%;
+
+    width: 62px;
+    height: 53px;
+    margin-top: -26px;
+    margin-left: -31px;
+
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+
+    @media (min-width: $tablet-width) {
+      width: 124px;
+      height: 106px;
+      margin-left: -62px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 175px;
+      right: 320px;
+      left: initial;
+    }
+  }
 }
 
 .map__img {
   width: 100%;
+  height: 360px;
+
+  @media (min-width: $tablet-width) {
+    height: 390px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 400px;
+  }
 }

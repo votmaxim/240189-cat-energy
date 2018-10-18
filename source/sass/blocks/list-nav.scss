@@ -1,6 +1,11 @@
 .list-nav {
   @include list-reset;
 
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -8,15 +13,21 @@
 }
 
 .list-nav__item {
-  padding: 24px 0;
+  padding: 21px 0;
 
   text-align: center;
 
-  border-top: 1px solid #e6e6e6;
+  @media (max-width: $mobile-width-only) {
+    border-bottom: 1px solid #e6e6e6;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-right: 35px;
-    border: 0;
+    padding: 18px 0;
 
     &:last-child {
       margin-right: 0;
@@ -49,7 +60,7 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: -6px;
+      bottom: -8px;
       left: 0;
 
       width: 100%;
