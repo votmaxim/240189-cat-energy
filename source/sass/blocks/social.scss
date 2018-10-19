@@ -25,6 +25,19 @@
   fill: #666666;
 }
 
+.social__icon:focus path,
+.social__icon:hover path,
+.social__icon:focus polygon,
+.social__icon:hover polygon,
+.social__icon:focus circle,
+.social__icon:hover circle {
+  fill: $bg-primary;
+}
+
+.social__icon:active {
+  opacity: 0.3;
+}
+
 .social__icon--vkontakte {
   @media (min-width: $tablet-width) {
     width: 30px;

@@ -242,13 +242,16 @@
 
   &:focus,
   &:hover {
-    padding-right: 48px;
+    padding-right: 43px;
+
+    @media (min-width: $tablet-width) {
+      padding-right: 58px;
+    }
 
     &::after {
-      width: 33px;
+      width: 32px;
 
       background-image: url("../img/icon-right-arrow-verylong.svg");
-      background-size: 33px 10px;
     }
   }
 

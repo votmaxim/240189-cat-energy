@@ -133,7 +133,6 @@
   position: relative;
 
   @include indent-reset;
-
   @include text-primary($size: 16px, $height: 20px, $transform: uppercase);
 
   background: none;
