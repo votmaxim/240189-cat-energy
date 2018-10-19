@@ -206,6 +206,20 @@
 
   border: 1px solid #e6e6e6;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+    padding: 16px 20px;
+  }
+
+  &::-webkit-input-placeholder {
+    @include text-primary($size: 16px, $height: 18px, $color: #444444, $transform: uppercase);
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
   &:hover {
     border: 1px solid #cdcdcd;
   }
@@ -219,20 +233,6 @@
   &:invalid {
     border: 1px solid #ff8282;
     outline: 1px solid #ff8282;
-  }
-
-  &::-webkit-input-placeholder {
-    @include text-primary($size: 16px, $height: 18px, $color: #444444, $transform: uppercase);
-  }
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
-    padding: 16px 20px;
-
-    &::-webkit-input-placeholder {
-      font-size: 20px;
-      line-height: 20px;
-    }
   }
 }
 
@@ -392,6 +392,21 @@
       font-size: 20px;
       line-height: 30px;
     }
+  }
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid #444444;
+    outline: 1px solid #444444;
+  }
+
+  &:invalid {
+    border: 1px solid #ff8282;
+    outline: 1px solid #ff8282;
   }
 }
 

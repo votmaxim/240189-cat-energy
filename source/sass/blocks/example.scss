@@ -77,25 +77,25 @@
 }
 
 .example__item {
-  &:first-child {
-    margin-right: auto;
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
   }
 
-  @media (min-width: $tablet-width) {
-    &:first-child {
+  &:first-child {
+    margin-right: auto;
+
+    @media (min-width: $tablet-width) {
       margin-right: 40px;
     }
+  }
 
-    &:last-child {
+  &:last-child {
+    @media (min-width: $tablet-width) {
       width: 175px;
       margin-left: auto;
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    justify-content: flex-start;
-
-    &:last-child {
+    @media (min-width: $desktop-width) {
       width: 325px;
       margin-left: 0;
     }

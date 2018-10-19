@@ -41,6 +41,16 @@
   margin-bottom: 20px;
   padding-left: 80px;
 
+  @media (min-width: $tablet-width) {
+    width: 245px;
+    margin: 40px 80px 40px 0;
+    padding: 115px 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -53,19 +63,15 @@
     background-color: $bg-primary;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-  }
 
-  @media (min-width: $tablet-width) {
-    width: 245px;
-    margin: 40px 80px 40px 0;
-    padding: 115px 0 50px;
-
-    &::before {
+    @media (min-width: $tablet-width) {
       width: 80px;
       height: 80px;
     }
+  }
 
-    &::after {
+  &::after {
+    @media (min-width: $tablet-width) {
       counter-increment: li;
       content: counter(li);
       position: absolute;
@@ -75,10 +81,6 @@
 
       @include text-primary($size: 281px, $height: 281px, $color: #f2f2f2);
     }
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-right: 0;
   }
 }
 

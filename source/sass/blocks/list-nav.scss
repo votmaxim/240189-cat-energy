@@ -19,8 +19,10 @@
   @media (min-width: $tablet-width) {
     margin-right: 35px;
     padding: 18px 0;
+  }
 
-    &:last-child {
+  &:last-child {
+    @media (min-width: $tablet-width) {
       margin-right: 0;
     }
   }
@@ -31,15 +33,6 @@
 
   @include text-primary(20px, 500, 20px, uppercase);
 
-  &:focus[href],
-  &:hover[href] {
-    opacity: 0.6;
-  }
-
-  &:active[href] {
-    opacity: 0.3;
-  }
-
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 25px;
@@ -48,11 +41,20 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
   }
+
+  &:focus[href],
+  &:hover[href] {
+    opacity: 0.6;
+  }
+
+  &:active[href] {
+    opacity: 0.3;
+  }
 }
 
 .list-nav__link--active {
-  @media (min-width: $tablet-width) {
-    &::after {
+  &::after {
+    @media (min-width: $tablet-width) {
       content: "";
       position: absolute;
       bottom: -8px;
@@ -69,8 +71,10 @@
 .list-nav__link--light {
   @media (min-width: $desktop-width) {
     color: $text-light;
+  }
 
-    &::after {
+  &::after {
+    @media (min-width: $desktop-width) {
       background-color: $text-light;
     }
   }
