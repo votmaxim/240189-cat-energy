@@ -7,7 +7,7 @@
 }
 
 .page-footer__contacts {
-  padding: 24px 20px;
+  padding: 27px 20px;
 
   @media (min-width: $tablet-width) {
     padding: 63px 70px;
@@ -34,7 +34,7 @@
 
 .page-footer__bottom {
   padding-top: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 27px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -42,7 +42,7 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 55px;
   }
 }
 
@@ -64,7 +64,7 @@
 
   @include list-reset;
   margin-bottom: 18px;
-  padding: 24px 75px 16px;
+  padding: 21px 75px 16px;
 
   @media (min-width: $tablet-width) {
     width: 142px;

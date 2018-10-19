@@ -1,5 +1,5 @@
 .product-about {
-  @media (max-width: $tablet-width-only) {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     padding-bottom: 11px;
 
     border-bottom: 1px solid #e6e6e6;

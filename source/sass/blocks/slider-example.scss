@@ -21,7 +21,7 @@
     margin-bottom: 10px;
   }
 
-  @media (max-width: $tablet-width-only) {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     padding: 50px 0 0 10px;
   }
 }
@@ -146,14 +146,16 @@
   }
 
   &::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: -7px;
-    left: 0;
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -7px;
+      left: 0;
 
-    height: 1px;
-    border-bottom: 1px dotted #bebebe;
+      height: 1px;
+      border-bottom: 1px dotted #bebebe;
+    }
   }
 
   &:focus::after,

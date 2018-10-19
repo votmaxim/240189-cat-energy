@@ -1,11 +1,15 @@
 .item-additional {
-  padding-top: 15px;
+  padding-top: 14px;
 
   border-top: 1px solid #cdcdcd;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    padding: 25px 37px 0;
+
+    border: 1px solid #cdcdcd;
+    border-bottom: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -13,6 +17,13 @@
     align-items: center;
     width: 895px;
     padding: 16px 0;
+
+    border-left: none;
+    border-right: none;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid #cdcdcd;
   }
 }
 
@@ -23,7 +34,7 @@
   @include text-primary($size: 16px, $height: 16px, $transform: uppercase);
 
   @media (min-width: $tablet-width) {
-    margin: 0 auto 25px;
+    margin: 0 auto 25px 0;
 
     font-size: 20px;
     line-height: 20px;
@@ -37,7 +48,9 @@
 
 .item-additional__table {
   width: 100%;
-  margin-bottom: 0 0 10px;
+  margin: 0 0 11px;
+
+  border-collapse: collapse;
 
   @media (min-width: $tablet-width) {
     width: 240px;
@@ -57,7 +70,7 @@
 
   @media (min-width: $tablet-width) {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
 
   @media (min-width: $desktop-width) {
