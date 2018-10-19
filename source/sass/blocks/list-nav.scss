@@ -1,11 +1,6 @@
 .list-nav {
   @include list-reset;
 
-  @media (max-width: $mobile-width-only) {
-    border-top: 1px solid #e6e6e6;
-    border-bottom: 1px solid #e6e6e6;
-  }
-
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -18,11 +13,7 @@
   text-align: center;
 
   @media (max-width: $mobile-width-only) {
-    border-bottom: 1px solid #e6e6e6;
-
-    &:last-child {
-      border-bottom: 0;
-    }
+    border-top: 1px solid #e6e6e6;
   }
 
   @media (min-width: $tablet-width) {

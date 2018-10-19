@@ -20,7 +20,7 @@
     @media (min-width: $tablet-width) {
       content: "";
 
-      min-width: 28px;
+      width: 28px;
       height: 3px;
       flex-grow: 1;
       margin-top: 14px;
@@ -40,14 +40,14 @@
   @include text-primary($size: 24px, $height: 24px);
 
   @media (min-width: $tablet-width) {
-    min-width: 708px;
+    width: 708px;
     margin: 0 auto 84px;
 
     font-size: 36px;
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 1300px;
+    width: 1300px;
   }
 
   &::after {

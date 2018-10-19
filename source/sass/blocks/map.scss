@@ -1,6 +1,8 @@
 .map {
   display: block;
 
+  text-align: center;
+
   &::after {
     content: "";
     position: absolute;
@@ -32,7 +34,6 @@
 }
 
 .map__img {
-  width: 100%;
   height: 360px;
 
   @media (min-width: $tablet-width) {
