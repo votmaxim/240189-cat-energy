@@ -27,7 +27,6 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     margin-bottom: 0;
 
     counter-reset: li;
@@ -49,6 +48,7 @@
 
   @media (min-width: $desktop-width) {
     margin-right: 0;
+    margin-left: 80px;
   }
 
   &::before {
@@ -80,6 +80,18 @@
       z-index: -1;
 
       @include text-primary($size: 281px, $height: 281px, $color: #f2f2f2);
+    }
+  }
+
+  &:nth-child(even) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-left: auto;
+    }
+  }
+
+  &:nth-child(4n+1) {
+    @media (min-width: $desktop-width) {
+      margin-left: 0;
     }
   }
 }
