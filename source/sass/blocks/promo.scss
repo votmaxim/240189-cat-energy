@@ -20,76 +20,73 @@
 .promo__container {
   position: relative;
 
-  padding-top: 30px;
+  padding-top: 28px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 60px 0 510px 120px;
+    padding: 54px 0 510px 120px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 90px;
-    padding-bottom: 180px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: -130px;
-      right: 0;
-      z-index: -1;
-
-      width: 720px;
-      height: 696px;
-
-      background-color: $bg-primary;
-      background-image: url("../img/index-background-desktop@1x.jpg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-    }
+    padding: 100px 0 170px 190px;
   }
 }
 
 .promo__title {
-  margin: 0 0 20px;
+  margin: 0 0 24px;
   padding: 0;
 
   @include text-primary($size: 36px, $height: 36px, $color: $text-light);
 
   @media (min-width: $tablet-width) {
-    width: 427px;
-    margin-bottom: 30px;
+    max-width: 427px;
+    margin-bottom: 38px;
 
     font-size: 60px;
     line-height: 60px;
     color: $text-dark;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 43px;
   }
 }
 
 .promo__slogan {
   display: block;
 
-  margin: 0 0 30px;
+  margin: 0 0 28px;
   padding: 0;
 
   @include text-primary($height: 14px, $transform: uppercase, $color: $text-light);
 
   @media (min-width: $tablet-width) {
+    max-width: 427px;
     margin-bottom: 50px;
 
     font-size: 20px;
     line-height: 20px;
     color: $text-dark;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 54px;
+  }
 }
 
 .promo__picture {
-  @include indent-reset;
+  display: block;
+
+  @media (max-width: $mobile-width-only) {
+    @include container-reset;
+    padding-right: 20px;
+  }
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    left: 0;
+    left: 30px;
     bottom: 0;
     z-index: -1;
 
@@ -98,7 +95,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 10px;
+    top: 25px;
     left: 560px;
     z-index: 0;
 

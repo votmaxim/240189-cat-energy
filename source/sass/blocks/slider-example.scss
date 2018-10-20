@@ -2,59 +2,178 @@
   position: relative;
 
   @include list-reset;
+  @include container-reset;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -40px;
+    margin-left: -40px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 28px;
+  }
 }
 
 .slider-example__item {
-  margin: 0 0 25px;
+  margin: 0 0 26px;
   padding: 0;
 
   text-align: center;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    padding-top: 60px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    padding: 90px 0 0 20px;
   }
 }
 
-.slider-example__item:not(.slider-example__item--active) {
+.slider-example__item:not(.slider-example__item--show) {
   display: none;
 }
 
-.slider-example__toggles {
-  @include indent-reset;
+.slider-example__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  text-align: center;
+  @media (min-width: $tablet-width) {
+    padding: 4px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 4px 0 4px 40px;
+  }
 }
 
-.slider-example__toggle {
-  @include text-primary($size: 16px, $height: 20px, $transform: uppercase);
+.slider-example__bar {
+  position: relative;
 
-  background: none;
-  border: 1px solid transparent;
-
-  cursor: pointer;
-}
-
-.slider-example__range {
-  width: 84px;
-  height: 14px;
-  padding: 5px;
+  width: 82px;
+  height: 12px;
+  margin: 0 18px;
 
   background-color: #ffffff;
   border: 1px solid #cdcdcd;
-  border-radius: 10px;
+  border-radius: 6px;
 
-  appearance: none;
-  cursor: pointer;
+  @media (min-width: $tablet-width) {
+    height: 6px;
+    flex-grow: 1;
 
-  &::-webkit-slider-thumb {
-    z-index: 1;
+    background-color: #dcdcdc;
+    border: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 5px;
 
     width: 35px;
     height: 6px;
 
     background-color: $bg-primary;
-    border-radius: 10px;
+    border-radius: 6px;
 
-    appearance: none;
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.slider-example__toggle {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+
+    width: 34px;
+    height: 34px;
+    margin-left: -17px;
+
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+    cursor: pointer;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 8px;
+      height: 8px;
+      margin-top: -4px;
+      margin-left: -4px;
+
+      background-color: $bg-primary;
+      border-radius: 50%;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    @media (min-width: $tablet-width) {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &:active {
+    @media (min-width: $tablet-width) {
+      border: 2px solid $bg-primary;
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.slider-example__btn {
+  position: relative;
+
+  @include indent-reset;
+  @include text-primary($size: 16px, $height: 20px, $transform: uppercase);
+
+  background: none;
+  border: 0;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -7px;
+      left: 0;
+
+      height: 1px;
+      border-bottom: 1px dotted #bebebe;
+    }
+  }
+
+  &:focus::after,
+  &:hover::after {
+    border-bottom-style: solid;
+  }
+
+  &:active::after {
+    border: none;
   }
 }

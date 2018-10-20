@@ -40,4 +40,17 @@
 
     text-align: right;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+
+    text-align: left;
+  }
+}
+
+.contacts__address-break {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-top: 18px;
+  }
 }

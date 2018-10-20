@@ -1,5 +1,14 @@
 .catalog {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 18px;
+    padding-top: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 29px;
+  }
 }
 
 .catalog__list {
@@ -9,15 +18,22 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: -60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -80px;
   }
 }
 
 .catalog__item {
   @media (min-width: $tablet-width) {
     width: 324px;
-    margin-bottom: 60px;
+    margin-bottom: 57px;
   }
 
   @media (min-width: $desktop-width) {

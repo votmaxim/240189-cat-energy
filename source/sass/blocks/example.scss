@@ -1,17 +1,21 @@
 .example {
   padding-top: 15px;
-  padding-bottom: 40px;
+  padding-bottom: 36px;
 
   background-color: #f2f2f2;
 
   @media (min-width: $tablet-width) {
     padding-top: 40px;
+    padding-bottom: 70px;
 
     background: linear-gradient(to bottom, #ffffff 620px, #f2f2f2 620px, #f2f2f2 100%);
   }
 
   @media (min-width: $desktop-width) {
-    background: linear-gradient(to bottom, #ffffff 175px, #f2f2f2 175px, #f2f2f2 100%);
+    padding-top: 35px;
+    padding-bottom: 70px;
+
+    background: linear-gradient(to bottom, #ffffff 170px, #f2f2f2 170px, #f2f2f2 100%);
   }
 }
 
@@ -30,7 +34,7 @@
 }
 
 .example__title {
-  margin: 0 0 20px;
+  margin: 0 0 26px;
   padding: 0;
 
   @include text-primary($size: 36px, $height: 60px);
@@ -43,16 +47,20 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 150px;
+    margin-bottom: 145px;
   }
 }
 
 .example__description {
-  margin-bottom: 0 0 30px;
+  margin: 0 0 25px;
   padding: 0;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
+
   @media (min-width: $desktop-width) {
-    margin-bottom: 70px;
+    margin-bottom: 67px;
   }
 }
 
@@ -62,27 +70,33 @@
   justify-content: center;
 
   @include list-reset;
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+  }
 }
 
 .example__item {
-  &:first-child {
-    margin-right: auto;
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
   }
 
-  @media (min-width: $tablet-width) {
-    &:first-child {
+  &:first-child {
+    margin-right: auto;
+
+    @media (min-width: $tablet-width) {
       margin-right: 40px;
     }
+  }
 
-    &:last-child {
+  &:last-child {
+    @media (min-width: $tablet-width) {
       width: 175px;
       margin-left: auto;
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    &:last-child {
-      width: 325px;
+    @media (min-width: $desktop-width) {
+      width: 330px;
       margin-left: 0;
     }
   }

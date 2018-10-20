@@ -4,6 +4,10 @@
   margin-bottom: 35px;
 
   text-align: center;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 48px;
+  }
 }
 
 .item-example--card {
@@ -15,31 +19,23 @@
   border-bottom: 0;
   border-radius: 3px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-
-    background: linear-gradient(to right, #cdcdcd 18px, transparent 18px, transparent 105px, #cdcdcd 105px, #cdcdcd 100%);
-  }
-
   @media (min-width: $tablet-width) {
     width: 162px;
     height: 72px;
-    padding-top: 22px;
-
-    &::after {
-      background: linear-gradient(to right, #cdcdcd 24px, transparent 24px, transparent 138px, #cdcdcd 138px, #cdcdcd 100%);
-    }
   }
 }
 
 .item-example--inline {
   @media (min-width: $tablet-width) {
+    padding-top: 12px;
+
     text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+
+    text-align: left;
   }
 }
 
@@ -66,25 +62,60 @@
   }
 }
 
+.item-example__title--inline span {
+  @media (min-width: $desktop-width) {
+    margin-left: 57px;
+  }
+}
+
 .item-example__subtitle {
   position: absolute;
-  top: 100%;
-  left: 50%;
+  top: 48px;
+  left: 0;
 
-  width: 87px;
-  padding: 0 14px;
-
-  transform: translate(-50%, -30%);
+  width: 121px;
+  display: flex;
 
   font-size: 12px;
   line-height: 12px;
   text-transform: lowercase;
 
   @media (min-width: $tablet-width) {
-    width: 115px;
-    padding: 0 7px;
+    top: 64px;
+
+    width: 160px;
 
     font-size: 14px;
     line-height: 14px;
+  }
+
+  &::before {
+    content: "";
+
+    width: 1px;
+    height: 1px;
+    flex-grow: 1;
+    margin-top: 6px;
+    margin-right: 10px;
+
+    background-color: #cdcdcd;
+  }
+
+  &::after {
+    content: "";
+
+    width: 1px;
+    height: 1px;
+    flex-grow: 1;
+    margin-top: 6px;
+    margin-left: 10px;
+
+    background-color: #cdcdcd;
+  }
+}
+
+.item-example__subtitle-break {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }

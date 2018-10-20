@@ -1,5 +1,5 @@
 .catalog-more {
-  padding: 25px 20px;
+  padding: 24px 20px;
 
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
@@ -8,8 +8,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 83px;
+    margin-left: 60px;
     padding: 55px 40px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 80px;
   }
 }
 
@@ -30,6 +35,14 @@
   @include text-primary($size: 16px, $height: 20px, $transform: uppercase);
   text-align: center;
 
+  @media (min-width: $tablet-width) {
+    width: 170px;
+    margin-bottom: 25px;
+    padding-top: 108px;
+
+    font-size: 20px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -43,16 +56,8 @@
     background-image: url("../img/icon-plus-mobile.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-  }
 
-  @media (min-width: $tablet-width) {
-    width: 170px;
-    margin-bottom: 25px;
-    padding-top: 120px;
-
-    font-size: 20px;
-
-    &::before {
+    @media (min-width: $tablet-width) {
       width: 60px;
       height: 60px;
       margin-left: -30px;

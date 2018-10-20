@@ -1,10 +1,20 @@
+.product-about {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    padding-bottom: 11px;
+
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
 .product-about__title {
-  margin: 0 0 35px;
+  margin: 0 0 25px;
   padding: 0;
 
   @include text-primary($size: 36px, $height: 60px);
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+
     font-size: 60px;
     line-height: 60px;
   }
@@ -12,12 +22,12 @@
 
 .product-about__list {
   @include list-reset;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin-bottom: 0;
 
     counter-reset: li;
   }
@@ -29,6 +39,17 @@
   min-height: 60px;
   margin-bottom: 20px;
   padding-left: 80px;
+
+  @media (min-width: $tablet-width) {
+    width: 245px;
+    margin: 40px 80px 40px 0;
+    padding: 115px 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+    margin-left: 80px;
+  }
 
   &::before {
     content: "";
@@ -42,19 +63,15 @@
     background-color: $bg-primary;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-  }
 
-  @media (min-width: $tablet-width) {
-    width: 245px;
-    margin: 45px 80px 45px 0;
-    padding: 120px 0 50px;
-
-    &::before {
+    @media (min-width: $tablet-width) {
       width: 80px;
       height: 80px;
     }
+  }
 
-    &::after {
+  &::after {
+    @media (min-width: $tablet-width) {
       counter-increment: li;
       content: counter(li);
       position: absolute;
@@ -66,8 +83,16 @@
     }
   }
 
-  @media (min-width: $desktop-width) {
-    margin-right: 0;
+  &:nth-child(even) {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-left: auto;
+    }
+  }
+
+  &:nth-child(4n+1) {
+    @media (min-width: $desktop-width) {
+      margin-left: 0;
+    }
   }
 }
 

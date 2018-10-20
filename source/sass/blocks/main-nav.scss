@@ -1,9 +1,10 @@
 .main-nav {
-  border-bottom: 1px solid #e6e6e6;
+  @media (max-width: $mobile-width-only) {
+    border-bottom: 1px solid #e6e6e6;
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 25px;
-    border: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -12,13 +13,30 @@
 }
 
 .main-nav__container {
+  position: relative;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+}
 
-  @media (min-width: $tablet-width) {
-    justify-content: flex-start;
+.main-nav--light .main-nav__container {
+  &::after {
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      top: -55px;
+      right: 0;
+      z-index: -1;
+
+      width: 720px;
+      height: 696px;
+
+      background-color: $bg-primary;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
   }
 }
 
@@ -36,14 +54,15 @@
 .main-nav__toggle {
   width: 24px;
   height: 18px;
+  align-self: center;
 
   @include indent-reset;
 
-  background: none;
+  background-color: transparent;
   background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
-  border: 0;
+  background-position: center 0;
+  border: none;
 
   cursor: pointer;
 
@@ -52,23 +71,30 @@
   }
 }
 
-.main-nav__toggle--active {
+.main-nav--opened .main-nav__toggle {
   background-image: url("../img/icon-close.svg");
 }
 
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
 .main-nav__navbar {
-  flex-basis: 100%;
-  flex-grow: 1;
+  @media (max-width: $mobile-width-only) {
+    flex-basis: 100%;
+    flex-grow: 1;
 
-  @include container-reset;
+    @include container-reset;
+  }
+}
 
-  &:not(&--show) {
+.main-nav--closed .main-nav__navbar {
+  @media (max-width: $mobile-width-only) {
     display: none;
   }
+}
 
-  @media (min-width: $tablet-width) {
-    flex-basis: auto;
-    flex-grow: 0;
-    margin: 0;
-  }
+.main-nav--opened .main-nav__navbar,
+.main-nav--nojs .main-nav__navbar {
+  display: block;
 }

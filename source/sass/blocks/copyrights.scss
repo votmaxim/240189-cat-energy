@@ -1,11 +1,22 @@
-.copyrights {
+.copyrights__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.copyrights__link {
   font-size: 16px;
   line-height: 16px;
   color: #444444;
+}
+
+.copyrights__img path {
+  fill: #666666;
+}
+
+.copyrights__link:focus path,
+.copyrights__link:hover path {
+  fill: $bg-primary;
+}
+
+.copyrights__link:active {
+  opacity: 0.3;
 }
