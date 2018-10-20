@@ -23,7 +23,7 @@
     z-index: 1;
 
     width: 570px;
-    height: 200px;
+    min-height: 200px;
 
     padding: 63px 75px;
   }
@@ -70,7 +70,7 @@
   padding: 21px 75px 16px;
 
   @media (min-width: $tablet-width) {
-    width: 142px;
+    min-width: 142px;
     margin: 0;
     padding: 0;
   }

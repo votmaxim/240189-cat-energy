@@ -5,6 +5,10 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  @media (min-width: $desktop-width) {
+    max-width: 545px;
+  }
 }
 
 .list-nav__item {
@@ -17,7 +21,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-right: 35px;
+    margin-right: 25px;
     padding: 18px 0;
   }
 

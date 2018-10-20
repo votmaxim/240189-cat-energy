@@ -9,7 +9,12 @@
     flex-direction: column;
     align-items: center;
     margin-top: 83px;
+    margin-left: 60px;
     padding: 55px 40px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 80px;
   }
 }
 
