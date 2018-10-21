@@ -149,6 +149,7 @@
 
     background-repeat: no-repeat;
     background-position: 0 0;
+    background-size: contain;
 
     @media (min-width: $tablet-width) {
       display: none;
@@ -245,6 +246,7 @@
     background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     background-position: 0 50%;
+    background-size: contain;
 
     @media (min-width: $tablet-width) {
       height: 20px;

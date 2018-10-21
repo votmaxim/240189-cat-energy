@@ -12,10 +12,10 @@
       <nav class="main-nav main-nav--light main-nav--closed main-nav--nojs">
         <div class="main-nav__container container">
           <a class="main-nav__logo logo-site">
-            <picture class="logo-site__picture">
+            <picture>
               <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="logo-site__img" src="img/logo-mobile.svg" alt="Логотип Кэт энерджи">
+              <img class="logo-site__img" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи">
             </picture>
           </a>
           <button class="main-nav__toggle" type="button">
@@ -46,11 +46,13 @@
         <div class="promo__container container">
           <h2 class="promo__title">Функциональное питание для котов</h2>
           <b class="promo__slogan">Занялся собой? Займись котом!</b>
-          <picture class="promo__picture">
-            <source media="(min-width: 1200px)" srcset="img/index-can-desktop@1x.png">
-            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
-            <img class="promo__img" src="img/index-can-desktop@1x.png" alt="Изображение товара Cat energy pro">
-          </picture>
+          <div class="promo__picture">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+              <img class="promo__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="271" alt="Изображение товара Cat energy pro">
+            </picture>
+          </div>
           <a class="promo__btn btn btn--primary" href="form.html">Подобрать программу</a>
         </div>
       </section>
@@ -126,16 +128,16 @@
             <ul class="slider-example__list">
               <li class="slider-example__item slider-example__item--show">
                 <picture class="slider-example__picture">
-                  <source media="(min-width: 1200px)" srcset="img/before-desktop@1x.png">
-                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-                  <img class="slider-example__img" src="img/before-mobile@1x.png" alt="Кот до смены корма">
+                  <source media="(min-width: 1200px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                  <img class="slider-example__img" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="Кот до смены корма">
                 </picture>
               </li>
               <li class="slider-example__item">
                 <picture class="slider-example__picture">
-                  <source media="(min-width: 1200px)" srcset="img/after-desktop@1x.png">
-                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
-                  <img class="slider-example__img" src="img/after-mobile@1x.png" alt="Кот после смены корма">
+                  <source media="(min-width: 1200px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="slider-example__img" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240" alt="Кот после смены корма">
                 </picture>
               </li>
             </ul>
@@ -157,11 +159,13 @@
           <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
           <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__address-break">Санкт-Петербург</span></p>
         </div>
-        <picture class="page-footer__map map">
-          <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.png">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
-          <img class="map__img" src="img/bg-map-mobile@1x.png" alt="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, г. Санкт-Петербург">
-        </picture>
+        <div class="page-footer__map map">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="360" height="362" alt="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, г. Санкт-Петербург">
+          </picture>
+        </div>
       </div>
       <div class="page-footer__bottom container">
         <a class="page-footer__logo logo-site">
@@ -229,6 +233,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/picturefill.min.js" async></script>
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -1,15 +1,19 @@
 .promo {
   text-align: center;
 
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: contain;
+  @media (max-width: $mobile-width-only) {
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: contain;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
+  }
 
   @media (min-width: $tablet-width) {
     text-align: left;
-
-    background: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -81,7 +85,6 @@
 
   @media (max-width: $mobile-width-only) {
     @include container-reset;
-    padding-right: 20px;
   }
 
   @media (min-width: $tablet-width) {
@@ -105,7 +108,15 @@
 }
 
 .promo__img {
-  width: 100%;
+  @media (min-width: $tablet-width) {
+    width: 709px;
+    height: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 552px;
+    height: auto;
+  }
 }
 
 .promo__btn {
