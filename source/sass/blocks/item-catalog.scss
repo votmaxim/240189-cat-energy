@@ -1,6 +1,7 @@
 .item-catalog {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding-right: 20px;
   padding-left: 20px;
 
@@ -8,6 +9,8 @@
 
   @media (min-width: $tablet-width) {
     width: 324px;
+    flex-direction: column;
+    flex-wrap: nowrap;
     margin-left: 60px;
     padding: 0;
 
@@ -29,6 +32,18 @@
     justify-content: center;
     align-items: flex-end;
     min-height: 208px;
+  }
+}
+
+.item-catalog__img {
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    height: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    height: auto;
   }
 }
 

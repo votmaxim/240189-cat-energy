@@ -1,7 +1,13 @@
 .map {
-  display: block;
+  position: relative;
 
   text-align: center;
+
+  @media (max-width: $mobile-width-only) {
+    max-height: 362px;
+
+    overflow: hidden;
+  }
 
   &::after {
     content: "";
@@ -28,20 +34,23 @@
     @media (min-width: $desktop-width) {
       top: 175px;
       right: 320px;
-      left: initial;
+      left: auto;
     }
   }
 }
 
 .map__img {
-  width: 100%;
-  height: 360px;
+  @media (max-width: $mobile-width-only) {
+    margin-top: -38px;
+  }
 
   @media (min-width: $tablet-width) {
+    width: 768px;
     height: 390px;
   }
 
   @media (min-width: $desktop-width) {
+    width: 1440px;
     height: 400px;
   }
 }

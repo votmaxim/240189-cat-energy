@@ -22,7 +22,7 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
@@ -32,6 +32,13 @@
 
 .slider-example__item:not(.slider-example__item--show) {
   display: none;
+}
+
+.slider-example__img {
+  @media (min-width: $tablet-width) {
+    width: 677px;
+    height: auto;
+  }
 }
 
 .slider-example__controls {
