@@ -1,13 +1,20 @@
 .map {
   position: relative;
 
-  text-align: center;
+  max-height: 400px;
 
   @media (max-width: $mobile-width-only) {
     max-height: 362px;
 
     overflow: hidden;
   }
+}
+
+.map__mock {
+  position: relative;
+
+  max-width: 1440px;
+  margin: 0 auto;
 
   &::after {
     content: "";
@@ -39,7 +46,7 @@
   }
 }
 
-.map__img {
+.map__mock img {
   @media (max-width: $mobile-width-only) {
     margin-top: -38px;
   }
@@ -53,4 +60,11 @@
     width: 1440px;
     height: 400px;
   }
+}
+
+.map__iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }

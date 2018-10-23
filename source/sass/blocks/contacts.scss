@@ -3,15 +3,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  background-color: #f2f2f2;
-
   @media (min-width: $desktop-width) {
     background-color: #ffffff;
   }
-}
-
-.contacts--light {
-  background-color: #ffffff;
 }
 
 .contacts__title {

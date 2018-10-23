@@ -128,7 +128,7 @@
 
 .form-feedback__title--additional {
   @media (min-width: $tablet-width) {
-    margin-bottom: 60px;
+    margin-bottom: 58px;
   }
 }
 
@@ -156,8 +156,18 @@
     width: 314px;
   }
 
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    &:nth-child(even) {
+      padding-left: 30px;
+    }
+  }
+
   @media (min-width: $desktop-width) {
-    width: 305px;
+    width: 324px;
+
+    &:last-child {
+      width: auto;
+    }
   }
 }
 

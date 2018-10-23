@@ -4,23 +4,24 @@
 
 .page-footer__top {
   position: relative;
+}
 
-  max-width: 1440px;
-  margin: 0 auto;
+.page-footer__top--light {
+  background-color: #ffffff;
 }
 
 .page-footer__contacts {
-  padding: 27px 20px;
+  padding: 27px 0;
 
   @media (min-width: $tablet-width) {
-    padding: 63px 70px;
+    padding: 63px 40px;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 95px;
+    top: 97px;
     left: 110px;
-    z-index: 1;
+    z-index: 3;
 
     width: 570px;
     min-height: 200px;
@@ -38,8 +39,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding-top: 50px;
-    padding-bottom: 55px;
+    padding-top: 55px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
+    padding-bottom: 50px;
   }
 }
 

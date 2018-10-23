@@ -18,24 +18,16 @@
   }
 }
 
-
-.social__icon path,
-.social__icon polygon,
-.social__icon circle {
+.social__icon {
   fill: #666666;
-}
 
-.social__icon:focus path,
-.social__icon:hover path,
-.social__icon:focus polygon,
-.social__icon:hover polygon,
-.social__icon:focus circle,
-.social__icon:hover circle {
-  fill: $bg-primary;
-}
+  &:hover {
+    fill: $bg-primary;
+  }
 
-.social__icon:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .social__icon--vkontakte {
