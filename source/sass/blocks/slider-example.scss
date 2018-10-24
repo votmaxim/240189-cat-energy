@@ -1,18 +1,22 @@
+.slider-example {
+  @include container-reset;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 740px;
+    margin-top: 135px;
+
+    background: linear-gradient(to right, #f2f2f2 56%, #eaeaea 56%);
+  }
+}
+
 .slider-example__list {
   position: relative;
 
   @include list-reset;
-  @include container-reset;
-
-  @media (min-width: $tablet-width) {
-    margin-top: -40px;
-    margin-left: -40px;
-    margin-bottom: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 28px;
-  }
 }
 
 .slider-example__item {
@@ -25,8 +29,8 @@
     margin-bottom: 20px;
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    padding: 90px 0 0 20px;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -38,6 +42,13 @@
   @media (min-width: $tablet-width) {
     width: 677px;
     height: auto;
+    margin-top: -170px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -190px;
+    margin-left: 50px;
+    margin-bottom: 40px;
   }
 }
 
@@ -47,11 +58,11 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding: 4px 70px;
+    padding: 4px 100px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 4px 0 4px 40px;
+    padding: 0 40px 0 130px;
   }
 }
 
