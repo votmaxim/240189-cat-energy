@@ -1,6 +1,6 @@
 .feedback {
   @media (min-width: $tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: $desktop-width) {
@@ -10,7 +10,7 @@
 
 .feedback__container {
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    padding-right: 70px;
+    padding-right: 67px;
     padding-left: 70px;
   }
 }

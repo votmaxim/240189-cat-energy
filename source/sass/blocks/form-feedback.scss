@@ -35,7 +35,7 @@
   margin-bottom: 14px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 55px;
+    margin-bottom: 53px;
   }
 }
 
@@ -50,77 +50,83 @@
 }
 
 .form-feedback__title-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
 
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1300px;
+  }
+
+  &::before,
   &::after {
     content: "";
+    position: absolute;
+    top: 13px;
+    z-index: -1;
 
     height: 3px;
-    flex-grow: 1;
-    margin-top: 14px;
 
     background-color: $bg-primary;
+
+    @media (min-width: $desktop-width) {
+      top: 17px;
+    }
   }
 
   &::before {
-    content: "";
+    left: 309px;
+    width: calc((100vw - 300px) / 2);
 
-    width: 28px;
-    height: 3px;
-    flex-grow: 1;
-    margin-top: 14px;
-    margin-right: 40px;
-
-    background-color: $bg-primary;
-
-    @media (max-width: $mobile-width-only) {
-      margin-right: 10px;
-
-      background: none;
+    @media (min-width: $tablet-width) {
+      left: 757px;
+      width: calc((100vw - 750px) / 2);
     }
+
+    @media (min-width: $desktop-width) {
+      left: 1280px;
+      width: calc((100vw - 1277px) / 2);
+    }
+  }
+
+  &::after {
+    width: 100vw;
+    right: 0;
   }
 }
 
 .form-feedback__title {
-  width: $mobile-width;
-  display: flex;
-  flex-wrap: nowrap;
+  display: inline-block;
   margin: 0 0 34px;
-  padding: 0;
+  padding: 0 20px;
 
   @include text-primary($size: 24px, $height: 24px);
 
+  background-color: #ffffff;
+
   @media (min-width: $tablet-width) {
-    width: $tablet-width - 60px;
-    margin: 0 auto 80px;
+    margin: 0 0 80px 30px;
+    padding: 0 40px;
 
     font-size: 36px;
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
-  }
-
-  &::after {
-    content: "";
-
-    flex-grow: 1;
-    height: 3px;
-    margin-top: 14px;
-    margin-left: 38px;
-
-    background-color: $bg-primary;
-
-    @media (max-width: $mobile-width-only) {
-      margin-left: 25px;
-    }
+    margin-left: 0;
   }
 }
 
 .form-feedback__title--additional {
   @media (min-width: $tablet-width) {
     margin-bottom: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 63px;
   }
 }
 
@@ -131,6 +137,8 @@
 }
 
 .form-feedback__group {
+  position: relative;
+
   display: flex;
   align-items: flex-start;
 
@@ -210,52 +218,53 @@
   }
 }
 
-.form-feedback__input--email {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 13'%3E%3Cpath d='M15.6 11.6H1.4V5.8H0V13h17V5.8h-1.4v5.8zM0 0v2.3l8.5 7.1L17 2.3V0H0zm15.6 1.6L8.5 7.5 1.4 1.6v-.2h14.2v.2z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: 93% 50%;
-  background-size: 17px 13px;
+.form-feedback__input--email,
+.form-feedback__input--phone {
+  padding-right: 50px;
+}
+
+.form-feedback__icon {
+  position: absolute;
+}
+
+.form-feedback__icon--email {
+  position: absolute;
+  top: 16px;
+  right: 16px;
 
   @media (min-width: $tablet-width) {
-    background-position: 96% 50%;
+    top: 20px;
+    right: 17px;
   }
 
-  &:focus {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 13' fill='%2368b738'%3E%3Cpath d='M15.6 11.6H1.4V5.8H0V13h17V5.8h-1.4v5.8zM0 0v2.3l8.5 7.1L17 2.3V0H0zm15.6 1.6L8.5 7.5 1.4 1.6v-.2h14.2v.2z'/%3E%3C/svg%3E");
-  }
-
-  &:invalid {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 13' fill='%23ff8282'%3E%3Cpath d='M15.6 11.6H1.4V5.8H0V13h17V5.8h-1.4v5.8zM0 0v2.3l8.5 7.1L17 2.3V0H0zm15.6 1.6L8.5 7.5 1.4 1.6v-.2h14.2v.2z'/%3E%3C/svg%3E");
-  }
-
-  &::-ms-clear,
-  &::-ms-reveal {
-    display: none;
+  @media (min-width: $desktop-width) {
+    right: 20px;
   }
 }
 
-.form-feedback__input--phone {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M17.9 9.4H9.4v1.2h8.5l-2.1 2.1.9.9 3.1-3.1c.2-.2.2-.6 0-.9l-3.1-3.1-.9.9 2.1 2zM8.1 19.4v-6.2c0-.3-.3-.6-.6-.6H3.1c0 .7.6 1.2 1.2 1.2h2.5v5H3.1c-1 .1-1.8-.7-1.9-1.7v-14c0-1 .8-1.8 1.7-1.8H6.8v5H4.4c-.7 0-1.2.6-1.2 1.2h4.4c.3 0 .6-.3.6-.6V.6C8.1.3 7.8 0 7.5 0H3.1C1.5-.1.1 1.2 0 2.9V16.8c-.1 1.7 1.2 3.1 2.9 3.1H7.5c.3.1.6-.2.6-.5z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: 93% 50%;
-  background-size: 20px 20px;
+.form-feedback__icon--phone {
+  position: absolute;
+  top: 12px;
+  right: 14px;
 
   @media (min-width: $tablet-width) {
-    background-position: 96% 50%;
+    top: 18px;
+    right: 13px;
   }
 
-  &:focus {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2368b738'%3E%3Cpath d='M17.9 9.4H9.4v1.2h8.5l-2.1 2.1.9.9 3.1-3.1c.2-.2.2-.6 0-.9l-3.1-3.1-.9.9 2.1 2zM8.1 19.4v-6.2c0-.3-.3-.6-.6-.6H3.1c0 .7.6 1.2 1.2 1.2h2.5v5H3.1c-1 .1-1.8-.7-1.9-1.7v-14c0-1 .8-1.8 1.7-1.8H6.8v5H4.4c-.7 0-1.2.6-1.2 1.2h4.4c.3 0 .6-.3.6-.6V.6C8.1.3 7.8 0 7.5 0H3.1C1.5-.1.1 1.2 0 2.9V16.8c-.1 1.7 1.2 3.1 2.9 3.1H7.5c.3.1.6-.2.6-.5z'/%3E%3C/svg%3E");
+  @media (min-width: $desktop-width) {
+    right: 20px;
   }
+}
 
-  &:invalid {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23ff8282'%3E%3Cpath d='M17.9 9.4H9.4v1.2h8.5l-2.1 2.1.9.9 3.1-3.1c.2-.2.2-.6 0-.9l-3.1-3.1-.9.9 2.1 2zM8.1 19.4v-6.2c0-.3-.3-.6-.6-.6H3.1c0 .7.6 1.2 1.2 1.2h2.5v5H3.1c-1 .1-1.8-.7-1.9-1.7v-14c0-1 .8-1.8 1.7-1.8H6.8v5H4.4c-.7 0-1.2.6-1.2 1.2h4.4c.3 0 .6-.3.6-.6V.6C8.1.3 7.8 0 7.5 0H3.1C1.5-.1.1 1.2 0 2.9V16.8c-.1 1.7 1.2 3.1 2.9 3.1H7.5c.3.1.6-.2.6-.5z'/%3E%3C/svg%3E");
-  }
+.form-feedback__input--email:focus + .form-feedback__icon,
+.form-feedback__input--phone:focus + .form-feedback__icon {
+  fill: $bg-primary;
+}
 
-  &::-ms-clear,
-  &::-ms-reveal {
-    display: none;
-  }
+.form-feedback__input--email:invalid + .form-feedback__icon,
+.form-feedback__input--phone:invalid + .form-feedback__icon {
+  fill: #ff8282;
 }
 
 .form-feedback__label {
@@ -270,6 +279,8 @@
   white-space: nowrap;
 
   @media (min-width: $tablet-width) {
+    margin-right: 18px;
+
     font-size: 20px;
     line-height: 20px;
   }
@@ -407,6 +418,7 @@
 
   @media (min-width: $tablet-width) {
     min-height: 175px;
+    padding: 10px 18px;
 
     font-size: 20px;
     line-height: 30px;
@@ -467,6 +479,7 @@
   line-height: 16px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
     padding-left: 65px;
 
     font-size: 16px;
