@@ -37,10 +37,16 @@
 
     @media (min-width: $desktop-width) {
       top: 175px;
-      right: 320px;
+      right: 280px;
       left: auto;
     }
   }
+}
+
+.map__mock picture {
+  display: block;
+
+  @include container-reset;
 }
 
 .map__mock img {
