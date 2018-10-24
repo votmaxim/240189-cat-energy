@@ -20,7 +20,7 @@
   @media (min-width: $desktop-width) {
     position: absolute;
     top: 97px;
-    left: 110px;
+    left: 40px;
     z-index: 3;
 
     width: 570px;
@@ -31,8 +31,8 @@
 }
 
 .page-footer__bottom {
-  padding-top: 40px;
-  padding-bottom: 27px;
+  padding-top: 48px;
+  padding-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     display: flex;

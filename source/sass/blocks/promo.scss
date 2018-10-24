@@ -5,7 +5,7 @@
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-size: contain;
+    background-size: 320px 305px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/index-background-mobile@2x.jpg");
@@ -34,7 +34,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 100px 0 170px 190px;
+    padding: 100px 0 170px 120px;
   }
 }
 
@@ -99,7 +99,7 @@
 
   @media (min-width: $desktop-width) {
     top: 25px;
-    left: 560px;
+    left: 490px;
     z-index: 0;
 
     width: 552px;

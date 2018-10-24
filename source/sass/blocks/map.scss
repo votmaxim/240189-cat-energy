@@ -13,9 +13,6 @@
 .map__mock {
   position: relative;
 
-  max-width: 1440px;
-  margin: 0 auto;
-
   &::after {
     content: "";
     position: absolute;
@@ -47,10 +44,6 @@
 }
 
 .map__mock img {
-  @media (max-width: $mobile-width-only) {
-    margin-top: -38px;
-  }
-
   @media (min-width: $tablet-width) {
     width: 768px;
     height: 390px;

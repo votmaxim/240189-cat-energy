@@ -5,7 +5,8 @@
   padding-right: 20px;
   padding-left: 20px;
 
-  border-top: 1px solid #ededed;
+  border: 1px solid #ededed;
+  border-bottom: none;
 
   @media (min-width: $tablet-width) {
     width: 324px;
