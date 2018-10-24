@@ -13,7 +13,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 35px;
-    padding-bottom: 70px;
+    padding-bottom: 65px;
 
     background: linear-gradient(to bottom, #ffffff 170px, #f2f2f2 170px, #f2f2f2 100%);
   }
@@ -91,7 +91,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      width: 330px;
+      width: auto;
       margin-left: 0;
     }
   }

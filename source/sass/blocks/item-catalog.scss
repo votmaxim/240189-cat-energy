@@ -55,6 +55,10 @@
     margin-bottom: 34px;
     padding: 38px 38px 0;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 40px;
+  }
 }
 
 .item-catalog__link {

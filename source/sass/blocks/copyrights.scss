@@ -1,4 +1,6 @@
 .copyrights__link {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,17 +8,26 @@
   font-size: 16px;
   line-height: 16px;
   color: #444444;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.copyrights__img path {
+.copyrights__link .copyrights__icon {
   fill: #666666;
 }
 
-.copyrights__link:focus path,
-.copyrights__link:hover path {
+.copyrights__link:hover .copyrights__icon {
   fill: $bg-primary;
-}
-
-.copyrights__link:active {
-  opacity: 0.3;
 }
