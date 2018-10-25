@@ -103,20 +103,23 @@
 .catalog-sections__title {
   position: relative;
 
-  margin: 0 0 30px;
+  margin-top: 0;
+  margin-bottom: 30px;
   padding-left: 70px;
 
   @include text-primary($size: 24px, $height: 37px, $transform: uppercase);
 
   @media (min-width: $tablet-width) {
     margin-bottom: 25px;
-    padding: 0;
+    padding-left: 0;
 
     font-size: 36px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 25px 0 32px 165px;
+    padding-top: 25px;
+    padding-bottom: 32px;
+    padding-left: 165px;
     margin-bottom: 42px;
   }
 
@@ -203,8 +206,9 @@
 
 .catalog-sections__description {
   max-width: 100%;
-  margin: 0 0 20px;
-  padding: 0 0 22px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 22px;
 
   border-bottom: 1px solid #d9d9d9;
 

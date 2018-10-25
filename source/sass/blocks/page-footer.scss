@@ -11,7 +11,8 @@
 }
 
 .page-footer__contacts {
-  padding: 27px 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
 
   @media (min-width: $tablet-width) {
     padding: 63px 40px;
@@ -26,7 +27,7 @@
     width: 570px;
     min-height: 200px;
 
-    padding: 63px 75px;
+    padding: 68px 75px 58px;
   }
 }
 
@@ -40,12 +41,11 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 55px;
-    padding-bottom: 50px;
+    padding-bottom: 55px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 60px;
-    padding-bottom: 50px;
+    padding-top: 65px;
   }
 }
 
@@ -56,7 +56,7 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -71,13 +71,13 @@
 
   @media (min-width: $tablet-width) {
     min-width: 142px;
-    margin: 0;
+    margin-bottom: 0;
     padding: 0;
   }
 }
 
 .page-footer__copyrights {
   @media (min-width: $tablet-width) {
-    width: 160px;
+    width: 163px;
   }
 }

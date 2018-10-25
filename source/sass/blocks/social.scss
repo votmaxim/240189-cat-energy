@@ -18,16 +18,32 @@
   }
 }
 
-.social__icon {
-  fill: #666666;
+.social__link {
+  position: relative;
 
-  &:hover {
-    fill: $bg-primary;
+  display: block;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 
   &:active {
     opacity: 0.3;
   }
+}
+
+.social__icon {
+  fill: #666666;
+}
+
+.social__link:hover .social__icon {
+  fill: $bg-primary;
 }
 
 .social__icon--vkontakte {

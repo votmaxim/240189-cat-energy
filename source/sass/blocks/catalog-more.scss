@@ -28,9 +28,9 @@
 .catalog-more__header {
   position: relative;
 
-  margin: 0 0 10px;
-  padding: 55px 0 0;
-  list-style: none;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-top: 55px;
 
   @include text-primary($size: 16px, $height: 20px, $transform: uppercase);
   text-align: center;
@@ -68,8 +68,8 @@
 }
 
 .catalog-more__info {
-  margin: 0 0 20px;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
 
   font-size: 12px;
   line-height: 16px;
