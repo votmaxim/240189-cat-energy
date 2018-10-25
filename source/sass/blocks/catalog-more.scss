@@ -1,10 +1,10 @@
 .catalog-more {
   padding: 24px 20px;
 
-  border-top: 1px solid #ededed;
-  border-bottom: 1px solid #ededed;
+  border: 1px solid #ededed;
 
   @media (min-width: $tablet-width) {
+    min-height: 431px;
     display: flex;
     flex-direction: column;
     align-items: center;

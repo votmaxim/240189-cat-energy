@@ -1,17 +1,21 @@
 .container {
+  position: relative;
+
+  width: $mobile-width;
   margin-right: auto;
   margin-left: auto;
   padding-right: 20px;
   padding-left: 20px;
 
   @media (min-width: $tablet-width) {
+    width: $tablet-width;
     padding-right: 30px;
     padding-left: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 1440px;
-    padding-right: 110px;
-    padding-left: 110px;
+    width: $desktop-width;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
