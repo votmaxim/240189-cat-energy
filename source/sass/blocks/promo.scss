@@ -1,30 +1,5 @@
 .promo {
-  position: relative;
-
   text-align: center;
-
-  &::before {
-    @media (max-width: $mobile-width-only) {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-
-      width: 320px;
-      height: 305px;
-      margin-left: -160px;
-
-      background-color: #65a93c;
-      background-image: url("../img/index-background-mobile@1x.jpg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      background-size: cover;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/index-background-mobile@2x.jpg");
-      }
-    }
-  }
 
   @media (min-width: $tablet-width) {
     text-align: left;
@@ -39,6 +14,29 @@
   position: relative;
 
   padding-top: 28px;
+
+  &::before {
+    @media (max-width: $mobile-width-only) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+
+      height: 305px;
+
+      background-color: #65a93c;
+      background-image: url("../img/index-background-mobile@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-background-mobile@2x.jpg");
+      }
+    }
+  }
 
   @media (min-width: $tablet-width) {
     display: flex;
