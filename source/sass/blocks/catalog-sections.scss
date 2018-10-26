@@ -86,6 +86,10 @@
 }
 
 .catalog-sections__item--pro {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    padding-right: 315px;
+  }
+
   &::after {
     @media (min-width: $tablet-width) {
       top: 50%;

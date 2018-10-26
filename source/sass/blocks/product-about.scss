@@ -46,8 +46,8 @@
     margin-top: 40px;
     margin-right: 80px;
     margin-bottom: 40px;
-    padding-top: 115px;
-    padding-bottom: 50px;
+    padding-top: 112px;
+    padding-bottom: 52px;
     padding-left: 0;
   }
 
@@ -84,6 +84,8 @@
       top: -40px;
       right: 0;
       z-index: -1;
+
+      min-width: 130px;
 
       @include text-primary($size: 281px, $height: 281px, $color: #f2f2f2);
     }

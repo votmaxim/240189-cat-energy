@@ -1,14 +1,28 @@
 .promo {
+  position: relative;
+
   text-align: center;
 
-  @media (max-width: $mobile-width-only) {
-    background-image: url("../img/index-background-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: 320px 305px;
+  &::before {
+    @media (max-width: $mobile-width-only) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/index-background-mobile@2x.jpg");
+      width: 320px;
+      height: 305px;
+      margin-left: -160px;
+
+      background-color: #65a93c;
+      background-image: url("../img/index-background-mobile@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-background-mobile@2x.jpg");
+      }
     }
   }
 
