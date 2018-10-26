@@ -1,5 +1,6 @@
 .form-feedback__item {
-  margin: 0 0 6px;
+  margin-top: 0;
+  margin-bottom: 6px;
   padding: 0;
 
   @media (min-width: $tablet-width) {
@@ -8,14 +9,20 @@
 }
 
 .form-feedback__item--bordered {
-  @include container-reset();
+  margin-right: -20px;
   margin-bottom: 28px;
-  padding: 20px 0 7px 20px;
+  margin-left: -20px;
+  padding-top: 20px;
+  padding-bottom: 7px;
+  padding-left: 20px;
 
   border: 1px solid #ededed;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 83px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 83px;
+    margin-left: 0;
     padding: 20px 25px 10px;
   }
 
@@ -101,16 +108,21 @@
 
 .form-feedback__title {
   display: inline-block;
-  margin: 0 0 34px;
-  padding: 0 20px;
+  margin-top: 0;
+  margin-bottom: 34px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   @include text-primary($size: 24px, $height: 24px);
 
   background-color: #ffffff;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 80px 30px;
-    padding: 0 40px;
+    margin-top: 0;
+    margin-bottom: 80px;
+    margin-left: 30px;
+    padding-right: 40px;
+    padding-left: 40px;
 
     font-size: 36px;
   }
@@ -173,7 +185,8 @@
 
 .form-feedback__input {
   width: 100%;
-  margin: 0 0 14px;
+  margin-top: 0;
+  margin-bottom: 14px;
   padding: 13px;
 
   @include text-primary($size: 16px, $height: 18px, $color: #444444, $transform: uppercase);
@@ -203,17 +216,17 @@
   }
 
   &:hover {
-    border: 1px solid #cdcdcd;
+    border-color: #cdcdcd;
   }
 
   &:focus,
   &:active {
-    border: 1px solid #444444;
+    border-color: #444444;
     outline: 1px solid #444444;
   }
 
   &:invalid {
-    border: 1px solid #ff8282;
+    border-color: #ff8282;
     outline: 1px solid #ff8282;
   }
 }
@@ -270,13 +283,13 @@
 .form-feedback__label {
   position: relative;
 
+  flex-shrink: 0;
   margin-top: 14px;
   margin-right: 14px;
 
   @include text-primary($size: 16px, $height: 18px, $color: #222222, $transform: uppercase);
 
   cursor: pointer;
-  white-space: nowrap;
 
   @media (min-width: $tablet-width) {
     margin-right: 18px;
@@ -288,12 +301,17 @@
 
 .form-feedback__label--radio {
   display: block;
-  margin: 0 0 13px;
-  padding: 6px 0 6px 45px;
+  margin-top: 0;
+  margin-bottom: 13px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 45px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 16px;
-    padding: 9px 0 9px 63px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 63px;
   }
 
   &:active {
@@ -350,11 +368,15 @@
 
 .form-feedback__label--checkbox {
   margin: 0 0 13px;
-  padding: 6px 0 6px 45px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 45px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 30px;
-    padding: 11px 0 11px 59px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 59px;
   }
 
   &:active {
@@ -436,17 +458,17 @@
   }
 
   &:hover {
-    border: 1px solid #cdcdcd;
+    border-color: #cdcdcd;
   }
 
   &:focus,
   &:active {
-    border: 1px solid #444444;
+    border-color: #444444;
     outline: 1px solid #444444;
   }
 
   &:invalid {
-    border: 1px solid #ff8282;
+    border-color: #ff8282;
     outline: 1px solid #ff8282;
   }
 }

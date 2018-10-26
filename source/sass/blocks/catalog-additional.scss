@@ -46,16 +46,20 @@
 
 .catalog-additional__title {
   display: inline-block;
-  margin: 0 0 34px;
-  padding: 0 20px;
+  margin-top: 0;
+  margin-bottom: 34px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   @include text-primary($size: 24px, $height: 24px);
 
   background-color: #ffffff;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 84px 30px;
-    padding: 0 40px;
+    margin-bottom: 84px;
+    margin-left: 30px;
+    padding-right: 40px;
+    padding-left: 40px;
 
     font-size: 36px;
   }
@@ -91,8 +95,9 @@
   position: relative;
 
   min-height: 288px;
-  margin: 0 0 35px;
-  padding: 185px 60px 40px 60px;
+  margin-top: 0;
+  margin-bottom: 35px;
+  padding: 185px 55px 40px;
 
   font-size: 16px;
   line-height: 20px;

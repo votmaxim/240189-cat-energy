@@ -1,5 +1,6 @@
 .page-main__title {
-  margin: 15px 0 28px;
+  margin-top: 15px;
+  margin-bottom: 28px;
   padding: 0;
 
   @include text-primary($size: 36px, $height: 60px);

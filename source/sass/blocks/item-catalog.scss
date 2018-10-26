@@ -54,7 +54,9 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 34px;
-    padding: 38px 38px 0;
+    padding-top: 38px;
+    padding-right: 38px;
+    padding-left: 38px;
   }
 
   @media (min-width: $desktop-width) {
@@ -69,14 +71,17 @@
 .item-catalog__title {
   width: 80px;
 
-  margin: 0 0 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
   padding: 0;
 
   @include text-primary($size: 16px, $height: 20px, $transform: uppercase);
 
   @media (min-width: $tablet-width) {
     width: 130px;
-    margin: 0 auto 15px;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-left: auto;
 
     font-size: 20px;
     text-align: center;
@@ -91,6 +96,8 @@
 
   @media (min-width: $tablet-width) {
     width: auto;
-    margin: 0 38px 40px;
+    margin-right: 38px;
+    margin-bottom: 40px;
+    margin-left: 38px;
   }
 }
